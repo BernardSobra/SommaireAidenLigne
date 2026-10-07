@@ -1,19 +1,21 @@
 # AideEnLigne
 
-Index des rubriques de l'aide en ligne PC SOFT (WINDEV / WEBDEV / WINDEV Mobile), extrait des messages de flux enregistrés dans `R:\MessagesAideWindev\` (fichiers `.eml`).
+Index des rubriques de l'aide en ligne PC SOFT (WINDEV / WEBDEV / WINDEV Mobile), construit à partir du compte Thunderbird **PC SOFT AIDE EN LIGNE**, dossier **« PC SOFT - Quoi de neuf dans l'aide en ligne »**.
 
 ## Fichiers
 
 | Fichier | Rôle |
 |---|---|
-| `AideEnLigne.json` | Les données : un enregistrement par message `.eml` |
-| `aide.py` | Script Python qui génère le JSON à partir des `.eml` |
+| `AideEnLigne.json` | Les données : une rubrique par adresse d'aide |
+| `aide.py` | Script Python qui met à jour le JSON depuis Thunderbird |
+| `etat.json` | État du script (mois du dernier passage complet). Non versionné |
+| `sauvegarde\` | Copie de la boîte Thunderbird avant marquage « lu ». Non versionné |
 
 ## Format de `AideEnLigne.json`
 
 Fichier UTF-8 contenant un tableau d'objets. Chaque objet a trois champs texte :
 
-| Champ | Origine dans le `.eml` | Contenu |
+| Champ | Origine dans le message | Contenu |
 |---|---|---|
 | `Titre` | en-tête `Subject` | Nom de la rubrique, entités HTML décodées (`&lt;Carte&gt;` devient `<Carte>`), avec son type entre parenthèses |
 | `Adresse` | en-tête `Content-Base` | URL de la rubrique, sans le paramètre `&name=...` |
@@ -29,29 +31,39 @@ Fichier UTF-8 contenant un tableau d'objets. Chaque objet a trois champs texte :
 }
 ```
 
+### Clé unique : l'adresse
+
+Une rubrique est identifiée par son **adresse** (le numéro d'aide après `?`), jamais par son titre. Le JSON contient donc une seule entrée par adresse. Quand une rubrique revient avec un texte différent, le message le plus récent remplace l'ancien, à la même place dans le fichier.
+
+## Mise à jour : `python aide.py`
+
+Le script lit directement le dossier Thunderbird, en lecture seule (Thunderbird peut rester ouvert pour la lecture). Le chemin du profil est la constante `BOITE`, en tête du script.
+
+| Mode | Quand | Ce qui est lu |
+|---|---|---|
+| **Incrémental** | par défaut | seulement les messages **« Non lu »** |
+| **Complet** | au premier lancement de chaque mois, ou avec `--complet` | tous les messages ; le JSON est reconstruit de zéro |
+
+À la fin :
+
+1. **Commit** : si le JSON a changé, `git add` et `git commit` automatiques, avec le nombre de rubriques nouvelles et modifiées dans le message. Jamais de `push`.
+2. **Marquage « lu »** : les messages pris en compte sont passés en « lu » dans Thunderbird, **uniquement si Thunderbird est fermé**. Sinon le script le signale, ne touche à rien et les messages restent « Non lu » (ils seront repris au prochain lancement, sans doublon grâce à la clé d'adresse). Avant tout marquage, la boîte est copiée dans `sauvegarde\`.
+
+Pour marquer les messages comme lus : fermer Thunderbird, lancer `python aide.py`, rouvrir Thunderbird.
+
 ## Contenu (état au 07/10/2026)
 
-- **3 539 enregistrements**, un par fichier `.eml`.
-- Aucun champ vide : chaque enregistrement a un titre, une adresse et un commentaire.
-- **Doublons** : seulement 1 882 adresses et 1 905 titres distincts, et 2 104 enregistrements distincts. Une même rubrique peut avoir été enregistrée plusieurs fois (fichiers `... 1435-2.eml`, ou versions successives de la doc). Dédoublonner par `Adresse` ou par `Titre` selon l'usage.
-- Répartition par type, d'après le suffixe du titre :
+- **1 882 rubriques**, issues de 3 539 messages (les autres sont des enregistrements multiples d'une même adresse).
+- Répartition d'après le suffixe du titre :
 
 | Type | Nombre |
 |---|---|
-| Fonction | 1 120 |
-| Type de variable | 820 |
-| Propriété | 232 |
-| syntaxe préfixée | 29 |
-| autres suffixes (IA, Update, GDS, Exemple...) | quelques unités chacun |
-| titre sans suffixe entre parenthèses | 1 264 |
-
-## Régénérer le JSON
-
-```bash
-python aide.py
-```
-
-Le script lit `R:\MessagesAideWindev` et écrit `AideEnLigne.json` dans ce dossier. Les chemins sont les variables `rep` et `sortie` en tête du script.
+| Fonction | 676 |
+| Type de variable | 363 |
+| Propriété | 131 |
+| syntaxe préfixée | 15 |
+| Exemple | 3 |
+| titre sans suffixe entre parenthèses | 664 |
 
 ## Source et droits
 
