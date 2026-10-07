@@ -5,7 +5,8 @@
   de chaque mois, ou avec l'option --complet. Le JSON n'est jamais vidé : une rubrique absente
   de la messagerie reste dans le JSON.
 - Une rubrique est identifiée par son adresse (numéro d'aide). Si elle existe déjà, elle est mise à jour.
-- Si le JSON a changé, un git commit est fait (jamais de push).
+- Chaque rubrique a un Theme (voir themes.py) et des Plateformes (en-tête Keywords du message).
+- Si le JSON a changé, un git commit est fait (jamais de push), sauf avec l'option --sans-commit.
 - Les messages pris en compte sont ensuite marqués comme lus, uniquement si Thunderbird est fermé.
 - Option --epure (quel que soit le mode) : supprime de la messagerie les anciens messages d'une même
   adresse, en gardant le plus récent. Thunderbird doit être fermé.
@@ -13,6 +14,8 @@
 """
 import os, re, json, html, shutil, subprocess, sys
 from datetime import date
+
+import themes
 
 DEPOT = os.path.dirname(os.path.abspath(__file__))
 JSON = os.path.join(DEPOT, "AideEnLigne.json")
@@ -24,6 +27,8 @@ BOITE = os.path.expandvars(
 
 LU = 0x0001
 SUPPRIME = 0x0008
+
+PLATEFORMES = {"Etats & Requêtes": "États et Requêtes"}
 
 
 def lire_messages(chemin):
@@ -52,11 +57,22 @@ def vers_enregistrement(bloc):
     if corps:
         commentaire = html.unescape(re.sub(r"<[^>]+>", "", corps.group(1)))
         commentaire = re.sub(r"\s+", " ", commentaire).strip()
+    mots = re.search(r"^Keywords:[ \t]*(.*)$", bloc, re.M)
+    plateformes = [PLATEFORMES.get(p.strip(), p.strip()) for p in mots.group(1).split(";") if p.strip()] if mots else []
     return {
         "Titre": html.unescape(sujet.group(1).strip()),
         "Adresse": adresse,
         "Commentaire": commentaire,
+        "Plateformes": plateformes,
     }
+
+
+def avec_theme(r):
+    """Renvoie la rubrique avec son Theme (recalculé à chaque passage, les règles pouvant évoluer)."""
+    numero = re.search(r"\?(\d+)", r["Adresse"])
+    t, _ = themes.theme(r["Titre"], numero.group(1) if numero else "")
+    return {"Titre": r["Titre"], "Adresse": r["Adresse"], "Commentaire": r["Commentaire"],
+            "Theme": t, "Plateformes": r.get("Plateformes", [])}
 
 
 def lire_json():
@@ -166,12 +182,12 @@ def main():
         ancien_r = connues.get(r["Adresse"])
         if ancien_r is None:
             nouvelles += 1
-        elif ancien_r != r:
+        elif {k: v for k, v in ancien_r.items() if k != "Theme"} != r:
             modifiees += 1
         rubriques[r["Adresse"]] = r
         if not statut & LU:
             a_marquer.append(pos)
-    resultat = list(rubriques.values())
+    resultat = [avec_theme(r) for r in rubriques.values()]
 
     nouveau = json.dumps(resultat, ensure_ascii=False, indent=2)
     ancien = ""
@@ -187,7 +203,9 @@ def main():
     else:
         with open(JSON, "w", encoding="utf-8") as f:
             f.write(nouveau)
-        if not os.path.isdir(os.path.join(DEPOT, ".git")):
+        if "--sans-commit" in sys.argv:
+            print("JSON mis à jour (--sans-commit : pas de commit).")
+        elif not os.path.isdir(os.path.join(DEPOT, ".git")):
             print("Pas de dépôt git ici (git init à faire) : pas de commit.")
         else:
             git("add", "AideEnLigne.json")
