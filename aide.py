@@ -28,7 +28,7 @@ BOITE = os.path.expandvars(
 LU = 0x0001
 SUPPRIME = 0x0008
 
-PLATEFORMES = {"Etats & Requêtes": "États et Requêtes"}
+PLATEFORMES = {"Etats & Requêtes": "États et Requêtes"}  # puis passé en majuscules
 
 
 def lire_messages(chemin):
@@ -58,7 +58,7 @@ def vers_enregistrement(bloc):
         commentaire = html.unescape(re.sub(r"<[^>]+>", "", corps.group(1)))
         commentaire = re.sub(r"\s+", " ", commentaire).strip()
     mots = re.search(r"^Keywords:[ \t]*(.*)$", bloc, re.M)
-    plateformes = [PLATEFORMES.get(p.strip(), p.strip()) for p in mots.group(1).split(";") if p.strip()] if mots else []
+    plateformes = [PLATEFORMES.get(p.strip(), p.strip()).upper() for p in mots.group(1).split(";") if p.strip()] if mots else []
     return {
         "Titre": html.unescape(sujet.group(1).strip()),
         "Adresse": adresse,
@@ -71,8 +71,8 @@ def avec_theme(r):
     """Renvoie la rubrique avec son Theme (recalculé à chaque passage, les règles pouvant évoluer)."""
     numero = re.search(r"\?(\d+)", r["Adresse"])
     t, _ = themes.theme(r["Titre"], numero.group(1) if numero else "")
-    return {"Titre": r["Titre"], "Adresse": r["Adresse"], "Commentaire": r["Commentaire"],
-            "Theme": t, "Plateformes": r.get("Plateformes", [])}
+    return {"Theme": t, "Plateformes": [p.upper() for p in r.get("Plateformes", [])],
+            "Titre": r["Titre"], "Adresse": r["Adresse"], "Commentaire": r["Commentaire"]}
 
 
 def lire_json():
