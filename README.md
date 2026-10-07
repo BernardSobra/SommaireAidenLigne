@@ -9,7 +9,7 @@ Index des rubriques de l'aide en ligne PC SOFT (WINDEV / WEBDEV / WINDEV Mobile)
 | `AideEnLigne.json` | Les données : une rubrique par adresse d'aide |
 | `aide.py` | Script Python qui met à jour le JSON depuis Thunderbird |
 | `etat.json` | État du script (mois du dernier passage complet). Non versionné |
-| `sauvegarde\` | Copie de la boîte Thunderbird avant marquage « lu ». Non versionné |
+| `sauvegarde\` | Copie de la boîte Thunderbird avant marquage « lu » ou épuration. Non versionné |
 
 ## Format de `AideEnLigne.json`
 
@@ -42,12 +42,19 @@ Le script lit directement le dossier Thunderbird, en lecture seule (Thunderbird 
 | Mode | Quand | Ce qui est lu |
 |---|---|---|
 | **Incrémental** | par défaut | seulement les messages **« Non lu »** |
-| **Complet** | au premier lancement de chaque mois, ou avec `--complet` | tous les messages ; le JSON est reconstruit de zéro |
+| **Complet** | au premier lancement de chaque mois, ou avec `--complet` | tous les messages, ajoutés au JSON existant |
+
+**Le JSON n'est jamais vidé** : dans les deux modes, le script part du JSON existant. Une rubrique qui n'est plus dans la messagerie (message supprimé ou épuré) reste dans le JSON. Le passage complet sert à tout relire, tout ajouter et mettre à jour les commentaires.
 
 À la fin :
 
 1. **Commit** : si le JSON a changé, `git add` et `git commit` automatiques, avec le nombre de rubriques nouvelles et modifiées dans le message. Jamais de `push`.
-2. **Marquage « lu »** : les messages pris en compte sont passés en « lu » dans Thunderbird, **uniquement si Thunderbird est fermé**. Sinon le script le signale, ne touche à rien et les messages restent « Non lu » (ils seront repris au prochain lancement, sans doublon grâce à la clé d'adresse). Avant tout marquage, la boîte est copiée dans `sauvegarde\`.
+2. **Marquage « lu »** : les messages pris en compte sont passés en « lu » dans Thunderbird, **uniquement si Thunderbird est fermé**. Sinon le script le signale, ne touche à rien et les messages restent « Non lu » (ils seront repris au prochain lancement, sans doublon grâce à la clé d'adresse). Avant toute modification de la boîte, elle est copiée dans `sauvegarde\`.
+3. **Épuration** (option `--epure`, utilisable avec les deux modes) : les anciens messages d'une même adresse sont supprimés de la messagerie, seul le plus récent est gardé. Thunderbird doit être fermé. Une adresse n'est épurée que si elle est déjà dans le JSON. Le fichier d'index `.msf` est supprimé et Thunderbird le reconstruit à son démarrage. Si besoin, les messages peuvent être récupérés avec la mise à jour de l'aide de PC SOFT, ou avec la copie de `sauvegarde\`.
+
+```bash
+python aide.py --epure
+```
 
 Pour marquer les messages comme lus : fermer Thunderbird, lancer `python aide.py`, rouvrir Thunderbird.
 

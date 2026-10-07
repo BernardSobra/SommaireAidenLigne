@@ -1,12 +1,15 @@
 """Met à jour AideEnLigne.json depuis le dossier Thunderbird « PC SOFT - Quoi de neuf dans l'aide en ligne ».
 
 - Mode incrémental (par défaut) : seuls les messages « Non lu » sont lus.
-- Mode complet : tout le dossier est relu. Automatique au premier lancement de chaque mois,
-  ou avec l'option --complet.
+- Mode complet : tout le dossier est relu et ajouté au JSON. Automatique au premier lancement
+  de chaque mois, ou avec l'option --complet. Le JSON n'est jamais vidé : une rubrique absente
+  de la messagerie reste dans le JSON.
 - Une rubrique est identifiée par son adresse (numéro d'aide). Si elle existe déjà, elle est mise à jour.
 - Si le JSON a changé, un git commit est fait (jamais de push).
-- Les messages pris en compte sont ensuite marqués comme lus, uniquement si Thunderbird est fermé
-  (une copie de la boîte est faite avant, dans sauvegarde\\).
+- Les messages pris en compte sont ensuite marqués comme lus, uniquement si Thunderbird est fermé.
+- Option --epure (quel que soit le mode) : supprime de la messagerie les anciens messages d'une même
+  adresse, en gardant le plus récent. Thunderbird doit être fermé.
+- Avant toute modification de la boîte, une copie est faite dans sauvegarde\\.
 """
 import os, re, json, html, shutil, subprocess, sys
 from datetime import date
@@ -80,10 +83,55 @@ def thunderbird_ouvert():
     return "thunderbird.exe" in r.stdout.lower()
 
 
+_sauvegarde_faite = False
+
+
+def sauvegarder():
+    """Copie la boîte dans sauvegarde\\ (une seule fois par lancement, avant la première modification)."""
+    global _sauvegarde_faite
+    if not _sauvegarde_faite:
+        os.makedirs(SAUVEGARDE, exist_ok=True)
+        shutil.copy2(BOITE, os.path.join(SAUVEGARDE, "boite_avant_modification"))
+        _sauvegarde_faite = True
+
+
+def epurer(rubriques):
+    """Supprime de la boîte les anciens messages d'une même adresse (garde le dernier).
+
+    Une adresse n'est épurée que si elle est déjà dans le JSON. Renvoie le nombre de messages supprimés.
+    L'index .msf est supprimé : Thunderbird le reconstruit au démarrage.
+    """
+    with open(BOITE, "rb") as f:
+        brut = f.read()
+    texte = brut.decode("latin-1")
+    debuts = [m.start() for m in re.finditer(r"^From - .*$\n", texte, flags=re.M)]
+    morceaux = []
+    for i, d in enumerate(debuts):
+        fin = debuts[i + 1] if i + 1 < len(debuts) else len(brut)
+        r = vers_enregistrement(brut[d:fin].decode("utf-8", errors="replace"))
+        morceaux.append((d, fin, r["Adresse"] if r else None))
+    dernier = {}
+    for i, (_, _, adresse) in enumerate(morceaux):
+        if adresse:
+            dernier[adresse] = i
+    garder = [i for i, (_, _, a) in enumerate(morceaux) if a is None or dernier[a] == i or a not in rubriques]
+    supprimes = len(morceaux) - len(garder)
+    if not supprimes:
+        return 0
+    sauvegarder()
+    nouveau = brut[:debuts[0]] + b"".join(brut[morceaux[i][0]:morceaux[i][1]] for i in garder)
+    temp = BOITE + ".tmp"
+    with open(temp, "wb") as f:
+        f.write(nouveau)
+    os.replace(temp, BOITE)
+    if os.path.exists(BOITE + ".msf"):
+        os.remove(BOITE + ".msf")
+    return supprimes
+
+
 def marquer_lus(positions):
     """Passe le bit « lu » du X-Mozilla-Status aux positions données (même longueur : le fichier ne bouge pas)."""
-    os.makedirs(SAUVEGARDE, exist_ok=True)
-    shutil.copy2(BOITE, os.path.join(SAUVEGARDE, "boite_avant_marquage"))
+    sauvegarder()
     taille = os.path.getsize(BOITE)
     with open(BOITE, "r+b") as f:
         for pos in positions:
@@ -105,9 +153,10 @@ def main():
     if not complet:
         messages = [m for m in messages if not m[0] & LU]
 
-    # Par adresse ; un message plus récent remplace l'ancien. Complet : on repart de zéro.
+    # Par adresse ; un message plus récent remplace l'ancien. On part toujours du JSON existant :
+    # rien n'est retiré du JSON, même si le message a disparu de la messagerie.
     connues = {r["Adresse"]: r for r in existant}
-    rubriques = {} if complet else dict(connues)
+    rubriques = dict(connues)
     nouvelles = modifiees = 0
     a_marquer = []
     for statut, pos, bloc in messages:
@@ -146,13 +195,18 @@ def main():
             r = git("commit", "-m", msg)
             print("Commit fait." if r.returncode == 0 else "Échec du commit : " + (r.stdout + r.stderr).strip())
 
-    if a_marquer:
+    epure = "--epure" in sys.argv
+    if a_marquer or epure:
         if thunderbird_ouvert():
-            print(f"Thunderbird est ouvert : {len(a_marquer)} messages NON marqués comme lus "
-                  "(ferme Thunderbird et relance le script).")
+            print("Thunderbird est ouvert : boîte non modifiée "
+                  f"({len(a_marquer)} messages non marqués comme lus"
+                  + (", épuration non faite" if epure else "") + "). Ferme Thunderbird et relance le script.")
         else:
-            marquer_lus(a_marquer)
-            print(f"{len(a_marquer)} messages marqués comme lus.")
+            if a_marquer:
+                marquer_lus(a_marquer)
+                print(f"{len(a_marquer)} messages marqués comme lus.")
+            if epure:
+                print(f"Épuration : {epurer(rubriques)} anciens messages supprimés de la messagerie.")
 
     if complet:
         etat["DernierComplet"] = mois
