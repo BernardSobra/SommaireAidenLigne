@@ -3,3 +3,13 @@ __pycache__/
 sauvegarde/
 journal.log
 .~lock.*
+
+# Projet WinDev : exécutables, DLL, sauvegardes et historique
+AideEnLigne/Exe/
+AideEnLigne/Sauvegarde/
+AideEnLigne/Historique/
+*.exe
+*.dll
+*.DLL
+# Cache de compilation WinDev (contient le nom de l'utilisateur, regénéré à chaque compilation)
+*.cpl/
