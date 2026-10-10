@@ -13,3 +13,6 @@ AideEnLigne/Historique/
 *.DLL
 # Cache de compilation WinDev (contient le nom de l'utilisateur, regénéré à chaque compilation)
 *.cpl/
+
+# Copie du JSON téléchargée par l application à l exécution (dans le dossier du projet en mode test)
+/AideEnLigne/AideEnLigne.json
