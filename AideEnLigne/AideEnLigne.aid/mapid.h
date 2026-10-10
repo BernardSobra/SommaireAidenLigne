@@ -1,0 +1,11 @@
+#define Aide_de_AideEnLigne	0x00000001
+#define Aide_de_AideEnLigne_Index	0x00000002
+#define W_AIDE_EN_LIGNE	0x00000003
+#define W_AIDE_EN_LIGNE_PROCEDURE_Proc_FiltreAideEnLigne	0x00000004
+#define W_AIDE_EN_LIGNE_PROCEDURE_RedessineListeAide	0x00000005
+#define W_AIDE_EN_LIGNE_PROCEDURE_RechercheAide	0x00000006
+#define W_AIDE_EN_LIGNE_PROCEDURE_Proc_TéléchargeAideEnLigne	0x00000007
+#define W_AIDE_EN_LIGNE_PROCEDURE_DessineBarreMessage	0x00000008
+#define COL_Globales	0x00000009
+#define COL_Globales_ChargeJsonAide	0x0000000a
+

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<BODY>
+<UL>
+<li><object type="text/sitemap">
+<param name="Name" value="Aide de AideEnLigne">
+<param name="Local" value="Aide_de_AideEnLigne.htm">
+</object>
+<ul>
+<li><object type="text/sitemap">
+<param name="Name" value="Liste des éléments du projet">
+<param name="Local" value="Aide_de_AideEnLigne_Index.htm">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="W_AIDE_EN_LIGNE">
+<param name="Local" value="W_AIDE_EN_LIGNE.htm">
+</object>
+<ul>
+<li><object type="text/sitemap">
+<param name="Name" value="Procédure 'Proc_FiltreAideEnLigne'">
+<param name="Local" value="W_AIDE_EN_LIGNE_PROCEDURE_Proc_FiltreAideEnLigne.htm">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Procédure 'RedessineListeAide'">
+<param name="Local" value="W_AIDE_EN_LIGNE_PROCEDURE_RedessineListeAide.htm">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Procédure 'RechercheAide'">
+<param name="Local" value="W_AIDE_EN_LIGNE_PROCEDURE_RechercheAide.htm">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Procédure 'Proc_TéléchargeAideEnLigne'">
+<param name="Local" value="W_AIDE_EN_LIGNE_PROCEDURE_Proc_TéléchargeAideEnLigne.htm">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Procédure 'DessineBarreMessage'">
+<param name="Local" value="W_AIDE_EN_LIGNE_PROCEDURE_DessineBarreMessage.htm">
+</object>
+</ul>
+<li><object type="text/sitemap">
+<param name="Name" value="COL_Globales">
+<param name="Local" value="COL_Globales.htm">
+</object>
+<ul>
+<li><object type="text/sitemap">
+<param name="Name" value="Procédure 'ChargeJsonAide'">
+<param name="Local" value="COL_Globales_ChargeJsonAide.htm">
+</object>
+</ul>
+</ul>
+</UL>
+</BODY>
+</HTML>

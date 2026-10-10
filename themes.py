@@ -97,6 +97,50 @@ THEMES = {
 # Défaut d'une catégorie générale quand aucune règle de titre ne s'applique
 GENERIQUES = {"proprietes": "Propriétés", "windev": "Outils"}
 
+# Catégories des 5 950 fonctions de la référence (categories.md) qui n'avaient pas encore de thème court
+SUPPLEMENT = {
+    "Champs": ["fonctions_action", "fonctions_action_bar", "fonctions_bandeau", "fonctions_barre", "fonctions_calendrier",
+               "fonctions_captcha", "fonctions_champ_saisie_invalide", "fonctions_chemin", "fonctions_jauge",
+               "fonctions_notes_repositionnables", "fonctions_ruban", "fonctions_panneau", "fonctions_upload",
+               "fonctions_image", "fonctions_groupe", "fonctions_pilote"],
+    "Animation": ["fonctions_animation", "fonctions_animation_champ", "fonctions_animation_fen"],
+    "Tableau de bord": ["fonctions_tableau_de_bord"],
+    "Tables et listes": ["fonctions_arbre"],
+    "Graphes": ["fonctions_tree_map"],
+    "Planning": ["fonctions_time_line"],
+    "HTML": ["fonctions_affichage_html"],
+    "PDF": ["fonctions_lecteur_pdf"],
+    "Multimédia": ["fonctions_camera", "fonctions_album", "fonctions_mci", "fonctions_reconnaissance_vocale"],
+    "Fenêtres et menus": ["fonctions_fenetre_edition", "fonctions_fenetre_interne", "fonctions_mdi", "fonctions_dnd"],
+    "Mobile": ["fonctions_apple_watch", "fonctions_capteur", "fonctions_geste", "fonctions_icloud", "fonctions_telephone",
+               "fonctions_sms", "fonctions_stockage_local", "fonctions_widget", "fonctions_kiosque"],
+    "Matériel": ["fonctions_bluetooth", "fonctions_cd", "fonctions_domo", "fonctions_fax", "fonctions_graveur",
+                 "fonctions_hasp", "fonctions_obex", "fonctions_ports_serie_para", "fonctions_proximite",
+                 "fonctions_twain", "fonctions_wi_fi"],
+    "Protocoles": ["fonctions_dns", "fonctions_flux", "fonctions_net", "fonctions_reseau", "fonctions_socket",
+                   "fonctions_ldap"],
+    "HTTP": ["fonctions_ajax"],
+    "SSH": ["fonctions_scp"],
+    "Interopérabilité": ["fonctions_j2ee", "fonctions_dotnet", "fonctions_java", "fonctions_python", "fonctions_matlab",
+                         "fonctions_sap", "fonctions_ole", "fonctions_dde"],
+    "Sécurité": ["fonctions_authentification", "fonctions_cle_activation", "fonctions_verrou", "fonctions_hash"],
+    "HFSQL": ["fonctions_cluster", "fonctions_liaison"],
+    "Calculs": ["fonctions_math", "fonctions_matrice", "fonctions_statistiques", "fonctions_finance", "fonctions_euro",
+                "fonctions_binaire"],
+    "Système": ["fonctions_appli", "fonctions_console", "fonctions_corbeille", "fonctions_fmem", "fonctions_mem",
+                "fonctions_registre", "fonctions_service", "fonctions_souris"],
+    "Tâches parallèles": ["fonctions_taches", "fonctions_taches_arriere_plan"],
+    "Outils": ["fonctions_test", "fonctions_projet", "fonctions_mcu", "fonctions_fabrique", "fonctions_action_rapide_x"],
+    "Google": ["fonctions_google_analytics"],
+    "WLangage": ["fonctions_objet"],
+    "Chaînes": ["fonctions_ortho"],
+    "Pays et TVA": ["fonctions_pays", "fonctions_pays_old"],
+}
+THEMES["Dates"].remove("fonctions_pays")
+for _theme, _cats in SUPPLEMENT.items():
+    THEMES.setdefault(_theme, []).extend(c for c in _cats if not c.endswith("_x"))
+
+
 CATEGORIE_VERS_THEME = {c: t for t, l in THEMES.items() for c in l}
 
 # (motif sur le titre, thème), dans l'ordre. Sert aux rubriques sans catégorie et aux catégories générales.

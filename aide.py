@@ -4,7 +4,10 @@
 - Mode complet : tout le dossier est relu et ajouté au JSON. Automatique au premier lancement
   de chaque mois, ou avec l'option --complet. Le JSON n'est jamais vidé : une rubrique absente
   de la messagerie reste dans le JSON.
-- Une rubrique est identifiée par son adresse (numéro d'aide). Si elle existe déjà, elle est mise à jour.
+- Une rubrique est identifiée par son _ID (numéro d'aide). Si elle existe déjà, seul son commentaire
+  est mis à jour si besoin ; sinon elle est ajoutée.
+- La référence categories.md (fonctions du dictionnaire WLangage) est ajoutée au JSON : _ID, titre, nom
+  anglais, catégorie, plateformes. Elle n'apporte pas de commentaire (renseigné ensuite par la messagerie).
 - Chaque rubrique a un Theme (voir themes.py) et des Plateformes (en-tête Keywords du message).
 - Si le JSON a changé, un git commit est fait (jamais de push), sauf avec l'option --sans-commit.
 - Les messages pris en compte sont ensuite marqués comme lus, uniquement si Thunderbird est fermé.
@@ -13,6 +16,7 @@
 - Avant toute modification de la boîte, une copie est faite dans sauvegarde\\.
 """
 import os, re, json, html, shutil, subprocess, sys
+from functools import lru_cache
 from datetime import date
 
 import themes
@@ -24,6 +28,9 @@ SAUVEGARDE = os.path.join(DEPOT, "sauvegarde")
 BOITE = os.path.expandvars(
     r"%APPDATA%\Thunderbird\Profiles\exy3pdyr.default-esr\Mail\Feeds\PC SOFT - Quoi de neuf dans l'aide en ligne"
 )
+
+REFERENCE = r"C:\DATA\DEVELOPPEMENT\windev-wlangage\windev-wlangage\index\categories.md"
+URL_AIDE = "https://doc.pcsoft.fr/fr-FR/?"
 
 LU = 0x0001
 SUPPRIME = 0x0008
@@ -60,6 +67,7 @@ def vers_enregistrement(bloc):
     mots = re.search(r"^Keywords:[ \t]*(.*)$", bloc, re.M)
     plateformes = [PLATEFORMES.get(p.strip(), p.strip()).upper() for p in mots.group(1).split(";") if p.strip()] if mots else []
     return {
+        "_ID": numero_aide(adresse),
         "Titre": html.unescape(sujet.group(1).strip()),
         "Adresse": adresse,
         "Commentaire": commentaire,
@@ -67,12 +75,67 @@ def vers_enregistrement(bloc):
     }
 
 
-def avec_theme(r):
-    """Renvoie la rubrique avec son Theme (recalculé à chaque passage, les règles pouvant évoluer)."""
-    numero = re.search(r"\?(\d+)", r["Adresse"])
-    t, _ = themes.theme(r["Titre"], numero.group(1) if numero else "")
-    return {"Theme": t, "Plateformes": [p.upper() for p in r.get("Plateformes", [])],
-            "Titre": r["Titre"], "Adresse": r["Adresse"], "Commentaire": r["Commentaire"]}
+def numero_aide(adresse):
+    """Numéro d'aide d'une adresse : https://doc.pcsoft.fr/fr-FR/?1410091156 => 1410091156."""
+    m = re.search(r"\?(\d+)", adresse)
+    return m.group(1) if m else ""
+
+
+@lru_cache(maxsize=None)
+def page_info(numero):
+    """Nom anglais, catégorie et plateformes d'une rubrique, d'après sa page du dictionnaire WLangage."""
+    info = {"anglais": "", "categorie": "", "plateformes": []}
+    try:
+        with open(os.path.join(themes.DICTIONNAIRE, numero + ".md"), encoding="utf-8") as f:
+            tete = f.read(1500)
+    except OSError:
+        return info
+    m = re.search(r'^english:\s*"([^"]*)"', tete, re.M)
+    info["anglais"] = m.group(1) if m else ""
+    m = re.search(r'^category:\s*"([^"]*)"', tete, re.M)
+    info["categorie"] = m.group(1) if m else ""
+    m = re.search(r'^source_help:\s*(\[.*\])', tete, re.M)
+    if m:
+        try:
+            info["plateformes"] = [PLATEFORMES.get(x, x).upper() for x in json.loads(m.group(1))]
+        except ValueError:
+            pass
+    return info
+
+
+def lire_reference():
+    """Rubriques de categories.md : [(_ID, titre, nom anglais, catégorie)]. Liste vide si le fichier est absent."""
+    if not os.path.exists(REFERENCE):
+        return []
+    resultat, categorie = [], ""
+    with open(REFERENCE, encoding="utf-8") as f:
+        for ligne in f:
+            m = re.match(r"## (\S+) \(\d+\)", ligne)
+            if m:
+                categorie = m.group(1)
+                continue
+            m = re.match(r"- \[(.+?)\]\(\.\./pages/(\d+)\.md\)(?: — \*(.+)\*)?", ligne)
+            if m:
+                resultat.append((m.group(2), m.group(1), m.group(3) or "", categorie))
+    return resultat
+
+
+def mise_en_forme(r):
+    """Rubrique complète, champs dans l'ordre du JSON. Le Theme est recalculé à chaque passage."""
+    numero = r["_ID"]
+    titre = r["Titre"]
+    t, _ = themes.theme(titre, numero)
+    info = page_info(numero)
+    return {
+        "_ID": numero,
+        "Theme": t,
+        "Plateformes": [p.upper() for p in r.get("Plateformes", [])],
+        "Titre": titre,
+        "Anglais": r.get("Anglais") or info["anglais"],
+        "Adresse": r["Adresse"],
+        "Commentaire": r.get("Commentaire", ""),
+        "Categorie": r.get("Categorie") or info["categorie"],
+    }
 
 
 def lire_json():
@@ -125,7 +188,7 @@ def epurer(rubriques):
     for i, d in enumerate(debuts):
         fin = debuts[i + 1] if i + 1 < len(debuts) else len(brut)
         r = vers_enregistrement(brut[d:fin].decode("utf-8", errors="replace"))
-        morceaux.append((d, fin, r["Adresse"] if r else None))
+        morceaux.append((d, fin, r["_ID"] if r else None))
     dernier = {}
     for i, (_, _, adresse) in enumerate(morceaux):
         if adresse:
@@ -169,25 +232,39 @@ def main():
     if not complet:
         messages = [m for m in messages if not m[0] & LU]
 
-    # Par adresse ; un message plus récent remplace l'ancien. On part toujours du JSON existant :
-    # rien n'est retiré du JSON, même si le message a disparu de la messagerie.
-    connues = {r["Adresse"]: r for r in existant}
-    rubriques = dict(connues)
+    # Clé = _ID. On part toujours du JSON existant : rien n'en est retiré, même si le message a disparu
+    # de la messagerie. Dédoublonnage par _ID dès le chargement (le dernier l'emporte).
+    rubriques = {}
+    for r in existant:
+        rubriques[r.get("_ID") or numero_aide(r["Adresse"])] = dict(r, _ID=r.get("_ID") or numero_aide(r["Adresse"]))
+
+    # 1. Référence : on ajoute ce qui manque ; une rubrique existante n'est pas modifiée.
+    de_reference = 0
+    for numero, titre, anglais, categorie in lire_reference():
+        if numero in rubriques:
+            continue
+        rubriques[numero] = {"_ID": numero, "Titre": titre, "Anglais": anglais, "Adresse": URL_AIDE + numero,
+                             "Commentaire": "", "Categorie": categorie,
+                             "Plateformes": page_info(numero)["plateformes"]}
+        de_reference += 1
+
+    # 2. Messagerie : si l'_ID existe, seul le commentaire change (si besoin) ; sinon la rubrique est ajoutée.
     nouvelles = modifiees = 0
     a_marquer = []
     for statut, pos, bloc in messages:
         r = vers_enregistrement(bloc)
-        if not r:
+        if not r or not r["_ID"]:
             continue
-        ancien_r = connues.get(r["Adresse"])
-        if ancien_r is None:
+        courante = rubriques.get(r["_ID"])
+        if courante is None:
+            rubriques[r["_ID"]] = r
             nouvelles += 1
-        elif {k: v for k, v in ancien_r.items() if k != "Theme"} != r:
+        elif r["Commentaire"] and courante.get("Commentaire") != r["Commentaire"]:
+            courante["Commentaire"] = r["Commentaire"]
             modifiees += 1
-        rubriques[r["Adresse"]] = r
         if not statut & LU:
             a_marquer.append(pos)
-    resultat = [avec_theme(r) for r in rubriques.values()]
+    resultat = [mise_en_forme(r) for r in rubriques.values()]
 
     nouveau = json.dumps(resultat, ensure_ascii=False, indent=2)
     ancien = ""
@@ -196,7 +273,8 @@ def main():
             ancien = f.read()
     mode = "complet" if complet else "incrémental"
     print(f"Mode {mode} : {len(messages)} messages lus, {len(resultat)} rubriques "
-          f"({nouvelles} nouvelles, {modifiees} modifiées par rapport au JSON).")
+          f"({de_reference} de la référence, {nouvelles} nouvelles de la messagerie, "
+          f"{modifiees} commentaires modifiés).")
 
     if nouveau == ancien:
         print("JSON inchangé, pas de commit.")
@@ -209,7 +287,7 @@ def main():
             print("Pas de dépôt git ici (git init à faire) : pas de commit.")
         else:
             git("add", "AideEnLigne.json")
-            msg = f"Mise à jour AideEnLigne.json ({mode}) : {len(resultat)} rubriques, +{nouvelles} nouvelles, {modifiees} modifiées"
+            msg = f"Mise à jour AideEnLigne.json ({mode}) : {len(resultat)} rubriques, +{de_reference} de la référence, +{nouvelles} nouvelles, {modifiees} commentaires modifiés"
             r = git("commit", "-m", msg)
             print("Commit fait." if r.returncode == 0 else "Échec du commit : " + (r.stdout + r.stderr).strip())
 
