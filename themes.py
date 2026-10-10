@@ -234,3 +234,25 @@ def theme(titre, numero_aide):
     if titre.endswith("(Propriété)"):
         return "Propriétés", "défaut"
     return "Divers", "défaut"
+
+
+# Les rubriques sans catégorie (hors dictionnaire) reçoivent un thème dans le même style que les catégories :
+# nom du thème court d'une règle de titre -> nom d'une catégorie existante (sans « fonctions_ »)
+VERS_CATEGORIE = {
+    "IA": "ia", "Serveur WEBDEV": "wdadmin", "Éditeur de code": "editeur_de_code", "Chaînes": "chaine",
+    "HFSQL": "hyper_file", "Drive": "drive", "Champs": "champ", "SQL": "sql", "Propriétés": "proprietes",
+    "Graphes": "graphe", "États et impression": "etat", "Tables et listes": "table", "Webservices": "webservice",
+    "Cartes": "carte", "Nouveautés": "nouveautes", "Dessin": "dessin", "E-mail": "emails",
+    "Traitement de texte": "traitement_texte", "HTTP": "http", "Dialogues": "dialogue_boite", "HTML": "html",
+    "Fenêtres et menus": "fenetre", "PDF": "pdf", "Divers": "divers", "JSON": "json", "Bitcoin": "bitcoin",
+    "Multimédia": "multimedia", "Tableau croisé": "tcd", "SSH": "ssh", "Multilingue": "multilangue", "XML": "xml",
+}
+
+
+def style_categorie(theme_court):
+    """Thème court -> nom dans le style des catégories (minuscules, sans accent, « _ » entre les mots)."""
+    if theme_court in VERS_CATEGORIE:
+        return VERS_CATEGORIE[theme_court]
+    import unicodedata
+    sans_accent = unicodedata.normalize("NFKD", theme_court).encode("ascii", "ignore").decode("ascii")
+    return re.sub(r"[^a-z0-9]+", "_", sans_accent.lower()).strip("_")

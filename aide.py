@@ -4,10 +4,12 @@
 - Mode complet : tout le dossier est relu et ajouté au JSON. Automatique au premier lancement
   de chaque mois, ou avec l'option --complet. Le JSON n'est jamais vidé : une rubrique absente
   de la messagerie reste dans le JSON.
-- Une rubrique est identifiée par son _ID (numéro d'aide). Si elle existe déjà, seul son commentaire
+- Une rubrique est identifiée par son ID (numéro d'aide). Si elle existe déjà, seul son commentaire
   est mis à jour si besoin ; sinon elle est ajoutée.
-- La référence categories.md (fonctions du dictionnaire WLangage) est ajoutée au JSON : _ID, titre, nom
-  anglais, catégorie, plateformes. Elle n'apporte pas de commentaire (renseigné ensuite par la messagerie).
+- EstLST est vrai si le commentaire contient « Article LST ».
+- La référence categories.md (fonctions du dictionnaire WLangage) est ajoutée au JSON : ID, titre, nom
+  anglais, thème (= catégorie sans le préfixe « fonctions_ »), plateformes. Elle n'apporte pas de
+  commentaire (renseigné ensuite par la messagerie). Sans catégorie, le thème vient des règles de themes.py.
 - Chaque rubrique a un Theme (voir themes.py) et des Plateformes (en-tête Keywords du message).
 - Si le JSON a changé, un git commit est fait (jamais de push), sauf avec l'option --sans-commit.
 - Les messages pris en compte sont ensuite marqués comme lus, uniquement si Thunderbird est fermé.
@@ -67,7 +69,7 @@ def vers_enregistrement(bloc):
     mots = re.search(r"^Keywords:[ \t]*(.*)$", bloc, re.M)
     plateformes = [PLATEFORMES.get(p.strip(), p.strip()).upper() for p in mots.group(1).split(";") if p.strip()] if mots else []
     return {
-        "_ID": numero_aide(adresse),
+        "ID": numero_aide(adresse),
         "Titre": html.unescape(sujet.group(1).strip()),
         "Adresse": adresse,
         "Commentaire": commentaire,
@@ -104,7 +106,7 @@ def page_info(numero):
 
 
 def lire_reference():
-    """Rubriques de categories.md : [(_ID, titre, nom anglais, catégorie)]. Liste vide si le fichier est absent."""
+    """Rubriques de categories.md : [(ID, titre, nom anglais, catégorie)]. Liste vide si le fichier est absent."""
     if not os.path.exists(REFERENCE):
         return []
     resultat, categorie = [], ""
@@ -120,21 +122,33 @@ def lire_reference():
     return resultat
 
 
+def theme_depuis_categorie(categorie):
+    """fonctions_camera_video => camera_video (les autres catégories restent telles quelles)."""
+    return categorie[len("fonctions_"):] if categorie.startswith("fonctions_") else categorie
+
+
 def mise_en_forme(r):
     """Rubrique complète, champs dans l'ordre du JSON. Le Theme est recalculé à chaque passage."""
-    numero = r["_ID"]
+    numero = r["ID"]
     titre = r["Titre"]
-    t, _ = themes.theme(titre, numero)
     info = page_info(numero)
+    categorie = r.get("Categorie") or info["categorie"]
+    commentaire = r.get("Commentaire", "")
+    if categorie:
+        theme = theme_depuis_categorie(categorie)
+    else:
+        # rubrique hors dictionnaire : règles sur le titre, nom mis dans le style des catégories
+        theme = themes.style_categorie(themes.theme(titre, numero)[0])
     return {
-        "_ID": numero,
-        "Theme": t,
+        "ID": int(numero),
+        "Theme": theme,
         "Plateformes": [p.upper() for p in r.get("Plateformes", [])],
         "Titre": titre,
         "Anglais": r.get("Anglais") or info["anglais"],
         "Adresse": r["Adresse"],
-        "Commentaire": r.get("Commentaire", ""),
-        "Categorie": r.get("Categorie") or info["categorie"],
+        "Commentaire": commentaire,
+        # Article de la LST (les résumés de la messagerie commencent par « Article LST »)
+        "EstLST": "Article LST" in commentaire,
     }
 
 
@@ -188,7 +202,7 @@ def epurer(rubriques):
     for i, d in enumerate(debuts):
         fin = debuts[i + 1] if i + 1 < len(debuts) else len(brut)
         r = vers_enregistrement(brut[d:fin].decode("utf-8", errors="replace"))
-        morceaux.append((d, fin, r["_ID"] if r else None))
+        morceaux.append((d, fin, r["ID"] if r else None))
     dernier = {}
     for i, (_, _, adresse) in enumerate(morceaux):
         if adresse:
@@ -232,32 +246,34 @@ def main():
     if not complet:
         messages = [m for m in messages if not m[0] & LU]
 
-    # Clé = _ID. On part toujours du JSON existant : rien n'en est retiré, même si le message a disparu
-    # de la messagerie. Dédoublonnage par _ID dès le chargement (le dernier l'emporte).
+    # Clé = ID. On part toujours du JSON existant : rien n'en est retiré, même si le message a disparu
+    # de la messagerie. Dédoublonnage par ID dès le chargement (le dernier l'emporte).
     rubriques = {}
     for r in existant:
-        rubriques[r.get("_ID") or numero_aide(r["Adresse"])] = dict(r, _ID=r.get("_ID") or numero_aide(r["Adresse"]))
+        # accepte aussi l'ancien nom "_ID" ; ID peut être un entier ou une chaîne dans le fichier
+        numero = str(r.get("ID") or r.get("_ID") or numero_aide(r["Adresse"]))
+        rubriques[numero] = dict(r, ID=numero)
 
     # 1. Référence : on ajoute ce qui manque ; une rubrique existante n'est pas modifiée.
     de_reference = 0
     for numero, titre, anglais, categorie in lire_reference():
         if numero in rubriques:
             continue
-        rubriques[numero] = {"_ID": numero, "Titre": titre, "Anglais": anglais, "Adresse": URL_AIDE + numero,
+        rubriques[numero] = {"ID": numero, "Titre": titre, "Anglais": anglais, "Adresse": URL_AIDE + numero,
                              "Commentaire": "", "Categorie": categorie,
                              "Plateformes": page_info(numero)["plateformes"]}
         de_reference += 1
 
-    # 2. Messagerie : si l'_ID existe, seul le commentaire change (si besoin) ; sinon la rubrique est ajoutée.
+    # 2. Messagerie : si l'ID existe, seul le commentaire change (si besoin) ; sinon la rubrique est ajoutée.
     nouvelles = modifiees = 0
     a_marquer = []
     for statut, pos, bloc in messages:
         r = vers_enregistrement(bloc)
-        if not r or not r["_ID"]:
+        if not r or not r["ID"]:
             continue
-        courante = rubriques.get(r["_ID"])
+        courante = rubriques.get(r["ID"])
         if courante is None:
-            rubriques[r["_ID"]] = r
+            rubriques[r["ID"]] = r
             nouvelles += 1
         elif r["Commentaire"] and courante.get("Commentaire") != r["Commentaire"]:
             courante["Commentaire"] = r["Commentaire"]
