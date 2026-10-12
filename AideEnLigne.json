@@ -23187,7 +23187,7 @@
     "Titre": "Ressource (Propriété)",
     "Anglais": "Resource",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000019308",
-    "Commentaire": "La propriété Ressource permet de : connaître les ressources visibles dans un champ Planning. connaître la ressource du champ Planning correspondant à l'indice spécifié et ses caractéristiques. Versions 2025 et supérieuresmodifier une propriété de la ressource du champ Planning pour l'indice spécifié.Nouveauté Abonnementmodifier une propriété de la ressource du champ Planning pour l'indice spécifié.Nouveauté 2025modifier une propriété de la ressource du champ Planning pour l'indice spécifié.modifier une propriété de la ressource du champ Planning pour l'indice spécifié.",
+    "Commentaire": "La propriété Ressource permet de : connaître les ressources visibles dans un champ Planning. connaître la ressource du champ Planning correspondant à l'indice spécifié et ses caractéristiques. modifier une propriété de la ressource du champ Planning pour l'indice spécifié.",
     "EstLST": false
   },
   {
@@ -34791,7 +34791,7 @@
     "Titre": "<Chaîne ANSI>.Incrémente (Fonction)",
     "Anglais": "<ANSI string>.Increment",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000024905",
-    "Commentaire": "",
+    "Commentaire": "Incrémente un nombre situé en fin ou début d'une chaîne de caractères.",
     "EstLST": false
   },
   {
@@ -35029,7 +35029,7 @@
     "Titre": "ChaîneIncrémente (Fonction)",
     "Anglais": "StringIncrement",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000020773",
-    "Commentaire": "",
+    "Commentaire": "Incrémente un nombre situé en fin ou début d'une chaîne de caractères.",
     "EstLST": false
   },
   {
@@ -35043,7 +35043,7 @@
     "Titre": "ChaîneInsère (Fonction)",
     "Anglais": "StringInsert",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000020477",
-    "Commentaire": "",
+    "Commentaire": "Insère une chaîne dans une autre chaîne de caractères à une position donnée.",
     "EstLST": false
   },
   {
@@ -35057,7 +35057,7 @@
     "Titre": "ChaîneInverse (Fonction)",
     "Anglais": "StringReverse",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000019901",
-    "Commentaire": "",
+    "Commentaire": "Inverse les caractères d'une chaîne.",
     "EstLST": false
   },
   {
@@ -35281,7 +35281,7 @@
     "Titre": "HexaVersEntier (Fonction)",
     "Anglais": "HexaToInt",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000019413",
-    "Commentaire": "",
+    "Commentaire": "Renvoie la valeur numérique d'une chaîne hexadécimale.",
     "EstLST": false
   },
   {
@@ -35463,7 +35463,7 @@
     "Titre": "MotVersTableau (Fonction)",
     "Anglais": "WordToArray",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000019898",
-    "Commentaire": "",
+    "Commentaire": "Remplit un tableau avec les mots d'une chaîne.",
     "EstLST": false
   },
   {
@@ -36877,7 +36877,7 @@
     "Titre": "RTFVersHTML (Fonction)",
     "Anglais": "RTFToHTML",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3025049",
-    "Commentaire": "",
+    "Commentaire": "Renvoie la chaîne HTML correspondant à la chaîne RTF spécifiée.",
     "EstLST": false
   },
   {
@@ -46747,7 +46747,7 @@
     "Titre": "HTMLVersRVB (Fonction)",
     "Anglais": "HTMLToRGB",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000019414",
-    "Commentaire": "",
+    "Commentaire": "Convertit la couleur HTML en couleur RVB.",
     "EstLST": false
   },
   {
@@ -102132,6 +102132,86 @@
     "Anglais": "LooperToXML",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3083032",
     "Commentaire": "",
+    "EstLST": false
+  },
+  {
+    "ID": 1410086916,
+    "Theme": "partie3",
+    "Plateformes": [
+      "WINDEV MOBILE"
+    ],
+    "Titre": "2. Les différents types de fichiers accessibles",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086916",
+    "Commentaire": "Les différents types de fichiers accessibles",
+    "EstLST": false
+  },
+  {
+    "ID": 1410086937,
+    "Theme": "partie7",
+    "Plateformes": [
+      "WINDEV MOBILE"
+    ],
+    "Titre": "1. Communication avec WINDEV Mobile",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086937",
+    "Commentaire": "WINDEV Mobile propose de nombreuses fonctions de communication dans un grand nombre de domaines.",
+    "EstLST": false
+  },
+  {
+    "ID": 1410086933,
+    "Theme": "partie5",
+    "Plateformes": [
+      "WINDEV MOBILE"
+    ],
+    "Titre": "1. Fonctions WLangage",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086933",
+    "Commentaire": "La plupart des fonctions WLangage présentes dans WINDEV standard sont également disponibles dans WINDEV Mobile.",
+    "EstLST": false
+  },
+  {
+    "ID": 1410087667,
+    "Theme": "chaine",
+    "Plateformes": [
+      "WINDEV",
+      "WEBDEV",
+      "WINDEV MOBILE",
+      "ÉTATS ET REQUÊTES"
+    ],
+    "Titre": "<Type Chaîne>.ExtraitChaîneAvant (Fonction)",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087667",
+    "Commentaire": "Permet d'extraire d'une chaîne de caractères la partie située entre le début de la chaîne et le début d'un séparateur de chaîne donné.Attention : Cette fonction est disponible uniquement à partir de la version 2026 Update 1.",
+    "EstLST": false
+  },
+  {
+    "ID": 1410087666,
+    "Theme": "chaine",
+    "Plateformes": [
+      "WINDEV",
+      "WEBDEV",
+      "WINDEV MOBILE",
+      "ÉTATS ET REQUÊTES"
+    ],
+    "Titre": "<Type Chaîne>.ExtraitChaîneAprès (Fonction)",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087666",
+    "Commentaire": "Permet d'extraire d'une chaîne de caractères la partie située entre la fin d'un séparateur de chaîne donné et la fin de la chaîne.Attention : Cette fonction est disponible uniquement à partir de la version 2026 Update 1.",
+    "EstLST": false
+  },
+  {
+    "ID": 1410091658,
+    "Theme": "apparence",
+    "Plateformes": [
+      "WINDEV",
+      "WEBDEV",
+      "WINDEV MOBILE"
+    ],
+    "Titre": "TailleConversationEnTokens (Propriété)",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091658",
+    "Commentaire": "La propriété TailleConversationEnTokens permet de connaître la taille d'une conversation exprimée en tokens.",
     "EstLST": false
   }
 ]
