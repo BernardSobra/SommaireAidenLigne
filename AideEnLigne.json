@@ -102213,5 +102213,45 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091658",
     "Commentaire": "La propriété TailleConversationEnTokens permet de connaître la taille d'une conversation exprimée en tokens.",
     "EstLST": false
+  },
+  {
+    "ID": 3070017,
+    "Theme": "socket",
+    "Plateformes": [
+      "WINDEV",
+      "WEBDEV",
+      "WINDEV MOBILE"
+    ],
+    "Titre": "Socket : Créer une application cliente",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?3070017",
+    "Commentaire": "Une application cliente d'un serveur de sockets se connecte à un serveur quelconque pour échanger des informations par l'intermédiaire d'une socket...",
+    "EstLST": false
+  },
+  {
+    "ID": 1410086929,
+    "Theme": "partie4",
+    "Plateformes": [
+      "WINDEV MOBILE"
+    ],
+    "Titre": "2. Application multilingue",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086929",
+    "Commentaire": "Une application multilingue est une application qui pourra être diffusée dans plusieurs langues.",
+    "EstLST": false
+  },
+  {
+    "ID": 1410088396,
+    "Theme": "wlangage",
+    "Plateformes": [
+      "WINDEV",
+      "WEBDEV",
+      "WINDEV MOBILE"
+    ],
+    "Titre": "Nextcloud : manipulez le stockage par programmation en WLangage",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410088396",
+    "Commentaire": "Article LSTLe code WLangage, réutilisable, d'accès et de manipulations des éléments stockés dans Nextcloud.Un exemple support.",
+    "EstLST": true
   }
 ]
