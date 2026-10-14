@@ -11,6 +11,10 @@
   anglais, thème (= catégorie sans le préfixe « fonctions_ »), plateformes. Elle n'apporte pas de
   commentaire (renseigné ensuite par la messagerie). Sans catégorie, le thème vient des règles de themes.py.
 - Chaque rubrique a un Theme (voir themes.py) et des Plateformes (en-tête Keywords du message).
+- Chaque rubrique a une Date (AAAA-MM-JJ) : 2026-01-01 par défaut pour tout le monde ; quand le message
+  de la messagerie est « non lu » (aide nouvelle ou modifiée), la date du message, c'est-à-dire le jour de
+  la modification (aujourd'hui pour un message reçu du jour). La date du message, plutôt que celle du
+  lancement, ne change pas si le message reste non lu (Thunderbird ouvert) d'un passage à l'autre.
 - Si le JSON a changé, un git commit est fait (jamais de push), sauf avec l'option --sans-commit.
 - Les messages pris en compte sont ensuite marqués comme lus, uniquement si Thunderbird est fermé.
 - Option --epure (quel que soit le mode) : supprime de la messagerie les anciens messages d'une même
@@ -18,6 +22,7 @@
 - Avant toute modification de la boîte, une copie est faite dans sauvegarde\\.
 """
 import os, re, json, html, shutil, subprocess, sys
+from email.utils import parsedate_to_datetime
 from functools import lru_cache
 from datetime import date
 
@@ -33,6 +38,9 @@ BOITE = os.path.expandvars(
 
 REFERENCE = r"C:\DATA\DEVELOPPEMENT\windev-wlangage\windev-wlangage\index\categories.md"
 URL_AIDE = "https://doc.pcsoft.fr/fr-FR/?"
+
+# Date de toutes les rubriques tant qu'aucun message « non lu » ne les a modifiées.
+DATE_DEFAUT = "2026-01-01"
 
 LU = 0x0001
 SUPPRIME = 0x0008
@@ -66,6 +74,14 @@ def vers_enregistrement(bloc):
     if corps:
         commentaire = html.unescape(re.sub(r"<[^>]+>", "", corps.group(1)))
         commentaire = re.sub(r"\s+", " ", commentaire).strip()
+    # Jour de la modification : date du message ; à défaut (en-tête absent ou illisible), jour du lancement.
+    jour = date.today().isoformat()
+    entete = re.search(r"^Date:[ \t]*(.+)$", bloc, re.M)
+    if entete:
+        try:
+            jour = parsedate_to_datetime(entete.group(1).strip()).astimezone().date().isoformat()
+        except (TypeError, ValueError):
+            pass
     mots = re.search(r"^Keywords:[ \t]*(.*)$", bloc, re.M)
     plateformes = [PLATEFORMES.get(p.strip(), p.strip()).upper() for p in mots.group(1).split(";") if p.strip()] if mots else []
     return {
@@ -74,6 +90,7 @@ def vers_enregistrement(bloc):
         "Adresse": adresse,
         "Commentaire": commentaire,
         "Plateformes": plateformes,
+        "DateMessage": jour,
     }
 
 
@@ -149,6 +166,8 @@ def mise_en_forme(r):
         "Commentaire": commentaire,
         # Article de la LST (les résumés de la messagerie commencent par « Article LST »)
         "EstLST": "Article LST" in commentaire,
+        # Jour de la dernière modification signalée par un message « non lu » (DATE_DEFAUT sinon).
+        "Date": r.get("Date") or DATE_DEFAUT,
     }
 
 
@@ -273,13 +292,16 @@ def main():
             continue
         courante = rubriques.get(r["ID"])
         if courante is None:
-            rubriques[r["ID"]] = r
+            rubriques[r["ID"]] = courante = r
             nouvelles += 1
         elif r["Commentaire"] and courante.get("Commentaire") != r["Commentaire"]:
             courante["Commentaire"] = r["Commentaire"]
             modifiees += 1
         if not statut & LU:
             a_marquer.append(pos)
+            # Aide « non lue » : modifiée ou nouvelle, elle prend le jour de son message. Plusieurs messages
+            # non lus pour la même aide : le plus récent l'emporte.
+            courante["Date"] = max(r["DateMessage"], courante.get("Date") or DATE_DEFAUT)
     resultat = [mise_en_forme(r) for r in rubriques.values()]
 
     nouveau = json.dumps(resultat, ensure_ascii=False, indent=2)
