@@ -2,6 +2,8 @@ etat.json
 __pycache__/
 sauvegarde/
 journal.log
+crawl*.json
+crawl.log
 .~lock.*
 
 # Projet WinDev : exécutables, DLL, sauvegardes et historique
