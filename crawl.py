@@ -5,7 +5,7 @@
 - Une page lue donne : Titre, Anglais (« En anglais : ... »), Commentaire (paragraphe de définition, balise
   Description), Plateformes (icônes). Thème : règles de themes.py, comme aide.py.
 - Fusion dans AideEnLigne.json : rubrique inconnue = ajoutée ; rubrique connue = seuls les champs vides
-  (Anglais, Commentaire, Plateformes) sont complétés, jamais écrasés.
+  (Titre, Anglais, Commentaire, Plateformes) sont complétés, jamais écrasés.
 - Reprise possible : crawl_etat.json (pages vues, file d'attente) et crawl_pages.json (données lues).
   Ctrl+C = arrêt propre, fusion faite. Pas de commit (commit.bat).
 
@@ -58,10 +58,11 @@ def analyser(numero, h):
     """(données de la page ou None si elle n'existe pas, numéros d'aide liés)."""
     liens = {int(n) for n in re.findall(r'href="(?:\./|https://doc\.pcsoft\.fr/fr-FR/)\?(\d+)[&"#]', h)}
     t = re.search(r"<title>(.*?)</title>", h, re.S)
-    titre = re.search(r'<div class="title">(.*?)</div>', h, re.S)
-    if not t or not titre or texte(t.group(1)) == ACCUEIL:
+    # Pages de tuto : le premier bloc « title » est vide, l'intitulé (« Leçon 1 - Le WLangage ») est dans le suivant.
+    titres = [x for x in (texte(b) for b in re.findall(r'<div class="title">(.*?)</div>', h, re.S)) if x]
+    if not t or not titres or texte(t.group(1)) == ACCUEIL:
         return None, liens
-    titre = texte(titre.group(1))
+    titre = titres[0]
     anglais = re.search(r'<div class="subtitle">\s*En anglais\s*(?:&nbsp;|\s)*:\s*(.*?)</div>', h, re.S)
     commentaire = ""
     d = re.search(r'<meta name="Description"[^>]*content="([^"]*)"', h)
@@ -115,7 +116,7 @@ def fusionner(pages):
             ajoutees += 1
             continue
         change = False
-        for champ in ("Anglais", "Commentaire", "Plateformes"):
+        for champ in ("Titre", "Anglais", "Commentaire", "Plateformes"):
             if not courante.get(champ) and p[champ]:
                 courante[champ] = p[champ]
                 change = True
