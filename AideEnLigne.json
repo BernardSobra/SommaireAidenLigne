@@ -52,7 +52,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087373",
     "Commentaire": "L'environnement de développement de vos outils intègre à partir de la version 2026 une IA conversationnelle (un compagnon) ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 1410086715,
@@ -223,7 +223,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?9000051",
     "Commentaire": "Voici la liste des principales nouveautés et améliorations que vous pourrez découvrir dans cette mise à jour...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-26"
   },
   {
     "ID": 9000193,
@@ -446,7 +446,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087218",
     "Commentaire": "Tuto WEBDEV - Un GDS pour WEBDEV Partagez vos sources grâce au GDS - 30 mn",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410087501,
@@ -459,7 +459,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087501",
     "Commentaire": "Tuto WEBDEV - Déploiement d'un site Leçon 3 - Administrer un site - 10 mn",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 1410087500,
@@ -472,7 +472,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087500",
     "Commentaire": "Tuto WEBDEV - Déploiement d'un site Leçon 2 - Déployer un site par HTTP - 30 mn",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 1410087498,
@@ -1347,7 +1347,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?9000052",
     "Commentaire": "Voici la liste des principales nouveautés que vous pourrez découvrir dans cette mise à jour...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-26"
   },
   {
     "ID": 1410087327,
@@ -1835,7 +1835,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087369",
     "Commentaire": "Avec le champ Chat IA, vos applications WINDEV, WEBDEV et WINDEV Mobile peuvent s’interfacer facilement avec le modèle d’IA que vous avez choisi...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 1410087517,
@@ -1914,7 +1914,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090742",
     "Commentaire": "Factur-X est un standard de facture électronique qui offre à la fois une facture lisible au format PDF et un fichier XML contenant les données de la facture nécessaires à son traitement informatisé...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 2019036,
@@ -3080,7 +3080,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?9000233",
     "Commentaire": "En version 2026, le serveur HFSQL intègre un moteur d'intelligence artificielle capable de réaliser des recherches sur le sens des mots ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410091362,
@@ -3508,7 +3508,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091337",
     "Commentaire": "Le type iaÉlémentConversation représente un élément dans une conversation effectuée via le champ Chat IA.Attention : Ce type de variable est disponible en iOS uniquement à partir de la version 2026 Update 2.Ce type de variable est disponible en WEBDEV uniquement à partir de la version \"avril 2026\".Ce type de variable est disponible en Android uniquement à partir de la version \"juin 2026\"",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-30"
   },
   {
     "ID": 1410091334,
@@ -3596,7 +3596,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?9000001",
     "Commentaire": "En version 2026, de nouvelles fonctions, propriétés et de nouveaux types de données font leur apparition et certains ont été améliorés, ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1000022108,
@@ -4744,7 +4744,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086773",
     "Commentaire": "Annule une demande en cours dans le champ Chat IA.Attention : Cette fonction est disponible en iOS uniquement à partir de la version 2026 Update 2.Cette fonction est disponible dans les sites WEBDEV uniquement à partir de la version \"avril 2026\".Cette fonction est disponible en Android uniquement à partir de la version \"juin 2026\"",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1410086776,
@@ -4776,7 +4776,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091363",
     "Commentaire": "Annule une demande en cours dans le champ Chat IA.Attention : Cette fonction est disponible en iOS uniquement à partir de la version 2026 Update 2.Cette fonction est disponible dans les sites WEBDEV uniquement à partir de la version \"avril 2026\".Cette fonction est disponible en Android uniquement à partir de la version \"juin 2026\"",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 9500223,
@@ -5409,7 +5409,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3044254",
     "Commentaire": "Effectue les opérations suivantes : Si le fichier de données n'existe pas, crée à vide un fichier de données (fichier d'extension \".FIC\") avec le fichier d'index, le fichier d'index full-text, le fichier d'index spatial, le fichier d'index sémantique et le fichier mémo si nécessaire. La fonction est équivalente à HCréation.Si le fichier de données existe, ouvre le fichier de données.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 3539051,
@@ -5864,7 +5864,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091221",
     "Commentaire": "Reconstruit l'index d'un fichier de données HFSQL Client/Serveur (fichier d'extension \".NDX\"). Cette réindexation est asynchrone : elle est effectuée sur le serveur et ne bloque pas le poste Client. Il est également possible de ré-indexer :les index full-text (fichiers d'extension \".FTX\"),les index spatiaux (fichiers d'extension \".SDX\").les index sémantiques (fichiers d'extension \".VEX\").",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 3516006,
@@ -6302,7 +6302,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?000000",
     "Commentaire": "Aide de WINDEV, WEBDEV et WINDEV Mobile",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-28"
   },
   {
     "ID": 3084010,
@@ -6575,7 +6575,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087567",
     "Commentaire": "La fenêtre de description du champ Chat IA permet de paramétrer plusieurs éléments importants, notamment dans les onglets \"Général\" et \"Détail\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-30"
   },
   {
     "ID": 1410091344,
@@ -6607,7 +6607,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086760",
     "Commentaire": "La propriété LibelléAssistant permet de connaître et de modifier le libellé affiché dans le champ Chat IA pour identifier la réponse de l'IA.Attention : Cette propriété est disponible en iOS uniquement à partir de la version 2026 Update 2.Cette propriété est disponible dans les sites WEBDEV uniquement à partir de la version \"avril 2026\".Cette propriété est disponible en Android uniquement à partir de la version \"juin 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 1410087372,
@@ -6685,7 +6685,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090043",
     "Commentaire": "Met en forme un code WLangage : coloration, réécriture normalisée, indentation, traduction, etc.Attention : Cette fonction est disponible en iOS à partir de la version \"septembre 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410091657,
@@ -6992,7 +6992,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091216",
     "Commentaire": "Procédure WLangage (également nommée \"callback\") appelée par la fonction HVérifieIndexAsynchrone pour chaque fichier de données HFSQL Client/Serveur vérifié.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 1410091106,
@@ -7267,7 +7267,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?9000050",
     "Commentaire": "Voici la liste des principales nouveautés et améliorations que vous pourrez découvrir dans cette mise à jour...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-26"
   },
   {
     "ID": 4010005,
@@ -7283,7 +7283,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?4010005",
     "Commentaire": "Les différentes méthodes permettant de contacter le Support Technique PCSoft.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 1000020876,
@@ -10102,7 +10102,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091374",
     "Commentaire": "Parcourt les résultats d'une recherche sémantique sur : un fichier de données, un tableau de structures ou de classes.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1000021194,
@@ -10292,7 +10292,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?2036002",
     "Commentaire": "Cette page présente la configuration nécessaire pour installer WINDEV, WEBDEV ou WINDEV Mobile ainsi que les différentes étapes de l'installation...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 1410087896,
@@ -10545,7 +10545,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091501",
     "Commentaire": "Le type iaQuestionInteractive représente les réponses possibles à une question posée par le modèle à l'utilisateur.Attention : Ce type de variable est disponible uniquement à partir de la version \"juillet 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-02"
   },
   {
     "ID": 4010001,
@@ -10560,7 +10560,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?4010001",
     "Commentaire": "Décrire un problème au Support Technique",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-30"
   },
   {
     "ID": 4010004,
@@ -10576,7 +10576,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?4010004",
     "Commentaire": "Nous savons que votre application peut être stratégique ou que vous désirez un accès prioritaire au Support Technique...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 4010008,
@@ -10592,7 +10592,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?4010008",
     "Commentaire": "Lorsque vous rencontrez un problème, essayez de l'isoler, et de le reproduire en utilisant le minimum d'éléments...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-30"
   },
   {
     "ID": 4010007,
@@ -10608,7 +10608,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?4010007",
     "Commentaire": "Transmettre des éléments au Support Technique",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 4010006,
@@ -10624,7 +10624,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?4010006",
     "Commentaire": "Vous venez d'acquérir un de nos produits et nous vous en félicitons...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 1410091673,
@@ -10763,7 +10763,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000022484",
     "Commentaire": "Le type docElément permet de manipuler chaque élément composant une variable de type docParagraphe.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-02"
   },
   {
     "ID": 9000064,
@@ -11319,7 +11319,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086952",
     "Commentaire": "1. Exemples livrés avec WINDEV Mobile",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1000025798,
@@ -11414,7 +11414,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000019650",
     "Commentaire": "Le type Image permet de définir toutes les caractéristiques avancées d'une image. Ce type de variable est disponible en code navigateur uniquement à partir de la version \"septembre 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-02"
   },
   {
     "ID": 3013068,
@@ -14489,7 +14489,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091225",
     "Commentaire": "Liste les différentes opérations effectuées sur les fichiers de données en cours ou celles qui ont eu lieu pendant les dernières 24 heures et sur les 1000 derniers fichiers : réindexations, recalcul des statistiques, vérification des mémo, vérification des index, etc.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1410091224,
@@ -14504,7 +14504,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091224",
     "Commentaire": "Réalise diverses statistiques sur les clés d'un fichier de données HFSQL Client/Serveur.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1410090964,
@@ -14532,7 +14532,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091223",
     "Commentaire": "Vérifie que les données contenues dans le fichier d'index (fichier .NDX) référencent correctement les données contenues dans le fichier de données HFSQL Client/Serveur (fichier .FIC).",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1410091222,
@@ -14547,7 +14547,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091222",
     "Commentaire": "Vérifie l'intégrité structurelle des mémos d'un fichier de données HFSQL Client/Serveur.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1000020623,
@@ -15674,7 +15674,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087597",
     "Commentaire": "List de las constantes utilizadas por las funciones del sistema.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1013165,
@@ -15702,7 +15702,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?9000218",
     "Commentaire": "De nombreuses options permettent de personnaliser et d'utiliser toutes les possibilités de l'éditeur de code...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-03"
   },
   {
     "ID": 9000221,
@@ -16225,9 +16225,9 @@
     "Titre": "URIVersBuffer (Fonction)",
     "Anglais": "URIToBuffer",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000024036",
-    "Commentaire": "Charge en arrière-plan le contenu d'une ressource (image, texte, etc.) identifiée par son URI dans une variable de type buffer.Attention : Cette fonction est disponible en WINDEV uniquement à partir de la version \"avril 2026\".Cette fonction est disponible en WEBDEV uniquement à partir de la version \"avril 2026\".",
+    "Commentaire": "Charge en arrière-plan le contenu d'une ressource (image, texte, etc.) identifiée par son URI dans une variable de type buffer.Attention : Cette fonction est disponible pour WINDEV uniquement à partir de la version \"avril 2026\".Cette fonction est disponible pour WEBDEV uniquement à partir de la version \"avril 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-23"
   },
   {
     "ID": 1000024037,
@@ -16444,7 +16444,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091208",
     "Commentaire": "Envoie une requête HTTP en mode asynchrone : le programme continue de s'exécuter et la réponse est traitée par une procédure spécifique.Attention : Cette fonction est disponible en Android uniquement à partir de la version \"avril 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-30"
   },
   {
     "ID": 3044107,
@@ -16877,7 +16877,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090146",
     "Commentaire": "Le type CodeWLangageMiseEnForme permet de définir tous les paramètres de mise en forme du code WLangage.Attention : Ce type de variable est disponible pour les applications Android et iOS à partir de la version \"septembre 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410090136,
@@ -21313,7 +21313,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091297",
     "Commentaire": "Envoie une requête HTTP en mode asynchrone : le programme continue de s'exécuter et la réponse est traitée par une procédure spécifique.Attention : Cette fonction est disponible en Android uniquement à partir de la version \"avril 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-30"
   },
   {
     "ID": 1000021294,
@@ -21860,7 +21860,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091587",
     "Commentaire": "Transcrit un fichier ou un buffer audio en utilisant la méthode des segments horodatés.Cette méthode est recommandée lorsque des \"timestamps\" sont indispensables (par exemple dans les cas de sous-titrages, synchronisation, navigation temporelle).Attention : Cette fonction est disponible pour WINDEV et WEBDEV uniquement à partir de la version \"avril 2026\".Cette fonction est disponible en Android uniquement à partir de la version \"juin 2026\".Cette fonction est disponible en iOS uniquement à partir de la version \"juin 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-30"
   },
   {
     "ID": 1410091580,
@@ -21924,7 +21924,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086813",
     "Commentaire": "Transcrit un fichier ou un buffer audio en utilisant la méthode des segments horodatés.Cette méthode est recommandée lorsque des \"timestamps\" sont indispensables (par exemple dans les cas de sous-titrages, synchronisation, navigation temporelle).Attention : Cette fonction est disponible pour WINDEV et WEBDEV uniquement à partir de la version \"avril 2026\".Cette fonction est disponible en Android uniquement à partir de la version \"juin 2026\".Cette fonction est disponible en iOS uniquement à partir de la version \"juin 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-30"
   },
   {
     "ID": 1410091588,
@@ -22400,7 +22400,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1511003",
     "Commentaire": "L'instruction POUR TOUT permet d'effectuer différents types de recherches sémantiques ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-05"
   },
   {
     "ID": 1410091409,
@@ -22619,7 +22619,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3539092",
     "Commentaire": "L'onglet \"Applications\" fournit des informations sur les applications installées sur le serveur d'application WEBDEV.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 2014008,
@@ -22751,7 +22751,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3539066",
     "Commentaire": "L'onglet \"Avancé\" permet de paramétrer des fonctionnalités avancées au niveau du serveur...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-03"
   },
   {
     "ID": 3539068,
@@ -23295,7 +23295,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087583",
     "Commentaire": "Ajoute et compresse automatiquement un fichier (de n'importe quel type) dans une archive de type CAB, ZIP, WDZ, 7z, TAR ou TGZ (TAR.GZ).",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 2027042,
@@ -24032,7 +24032,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087626",
     "Commentaire": "Un serveur MCP est une application qui implémente le protocole MCP (Model Context Protocol) pour permettre à un client (modèle d'IA ou chat) d'accéder à des ressources externes...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1000021522,
@@ -24177,7 +24177,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000023514",
     "Commentaire": "Modifie l'ensemble des connexions HFSQL Client/Serveur à destination d'un serveur source pour les faire utiliser un serveur destination.Attention : Cette fonction est disponible uniquement à partir de la version \"juillet 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1410086815,
@@ -24319,7 +24319,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086839",
     "Commentaire": "Renvoie la hauteur d'une ligne (en pixels) dans le champ Editeur de code.Attention : Cette fonction est disponible uniquement à partir de la version \"juillet 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410087630,
@@ -24347,7 +24347,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086843",
     "Commentaire": "Renvoie le nombre de lignes de code présentes dans le champ Editeur de code.Attention : Cette fonction est disponible uniquement à partir de la version \"juillet 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410086836,
@@ -24389,7 +24389,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086837",
     "Commentaire": "Déclare des mots-clés supplémentaires par rapport à ceux déjà connu dans le langage courant (langage SQL ou WLangage). Attention : Cette fonction est disponible uniquement à partir de la version \"juillet 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410087632,
@@ -24728,7 +24728,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090251",
     "Commentaire": "Recherche et remplace une chaîne de caractères dans le champ Editeur de code.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410091713,
@@ -24872,7 +24872,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000017985",
     "Commentaire": "La propriété Titre permet de connaître et de modifier le titre d'un élément.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-30"
   },
   {
     "ID": 1000022503,
@@ -25071,7 +25071,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?9000237",
     "Commentaire": "Compagnon IA : Utilisation et caractéristiques",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-26"
   },
   {
     "ID": 9500013,
@@ -25102,7 +25102,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087644",
     "Commentaire": "Compagnon IA : Eléments accessibles",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-30"
   },
   {
     "ID": 1410087656,
@@ -25630,7 +25630,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?9000101",
     "Commentaire": "Les paramètres d'hébergement définissent les valeurs par défaut utilisées pour la création de nouveaux comptes d'hébergement...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-02"
   },
   {
     "ID": 1410086881,
@@ -26116,7 +26116,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3540704",
     "Commentaire": "Le Centre de Gestion de Projets permet de définir pour chaque intervenant d'un projet les différentes tâches correspondantes...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 1000020799,
@@ -26164,7 +26164,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090329",
     "Commentaire": "Met en forme un code WLangage : coloration, réécriture normalisée, indentation, traduction.Attention : Cette fonction est disponible en iOS à partir de la version \"septembre 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 2027001,
@@ -26206,7 +26206,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091714",
     "Commentaire": "Crée et configure un modèle de transcription audio s'appuyant sur le moteur de reconnaissance vocale natif du système d'exploitation iOS.Versions 2026 et supérieuresAttention : Cette fonction est disponible uniquement à partir de la version \"septembre 2026\".Nouveauté AbonnementAttention : Cette fonction est disponible uniquement à partir de la version \"septembre 2026\".Nouveauté 2026Attention : Cette fonction est disponible uniquement à partir de la version \"septembre 2026\".Attention : Cette fonction est disponible uniquement à partir de la version \"septembre 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-02"
   },
   {
     "ID": 1410091719,
@@ -26284,7 +26284,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?9000238",
     "Commentaire": "La complétion de code par IA générative permet d'obtenir des propositions pertinentes de code WLangage à partir du code saisi dans l'éditeur de code...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-03"
   },
   {
     "ID": 1410091296,
@@ -27056,7 +27056,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087877",
     "Commentaire": "Annule la transaction jusqu'au point de sauvegarde.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1000022772,
@@ -27072,7 +27072,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000022772",
     "Commentaire": "Vérifie s'il existe une version plus récente du serveur HFSQL pouvant être mise à jour automatiquement.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 2510018,
@@ -27087,7 +27087,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?2510018",
     "Commentaire": "Lors de l'utilisation de plusieurs GDS, il peut être nécessaire de partager des éléments (classes, collections de procédures, fenêtres, pages, etc...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 2038035,
@@ -27098,7 +27098,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?2038035",
     "Commentaire": "Le GDS : Un gestionnaire de sources intégré",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 3063005,
@@ -27114,7 +27114,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3063005",
     "Commentaire": "Écrit des informations de type texte ou image dans le presse-papiers du système.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 1512001,
@@ -27130,7 +27130,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1512001",
     "Commentaire": "Les chaînes de caractères peuvent être manipulées par des fonctions spécifiques du WLangage ou par les opérateurs +, [[ et ]]...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-01"
   },
   {
     "ID": 1410088399,
@@ -27143,7 +27143,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410088399",
     "Commentaire": "Article LSTComment lancer une Activity native Android depuis un projet WINDEV.Un exemple support avec un cas concret : la récupération des informations d'un contact choisi dans le sélecteur natif d'Android.",
     "EstLST": true,
-    "Date": "2026-01-01"
+    "Date": "2026-10-02"
   },
   {
     "ID": 2014010,
@@ -27158,7 +27158,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?2014010",
     "Commentaire": "Les évolutions d'un composant externe peuvent être de plusieurs natures ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-02"
   },
   {
     "ID": 6010013,
@@ -27173,7 +27173,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?6010013",
     "Commentaire": "L'opérateur \"est <Classe>\" permet de savoir si l'objet manipulé est un objet de la classe ou l'une de ses dérivées",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-05"
   },
   {
     "ID": 4510001,
@@ -27186,7 +27186,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?4510001",
     "Commentaire": "Licence d'utilisation du logiciel WINDEV",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410087058,
@@ -27199,7 +27199,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087058",
     "Commentaire": "9. Les requêtes",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410087052,
@@ -27212,7 +27212,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087052",
     "Commentaire": "3. Les différents types de fichiers de données accessibles",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410087062,
@@ -27225,7 +27225,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087062",
     "Commentaire": "13. Architecture 3-tiers",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410087479,
@@ -27238,7 +27238,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087479",
     "Commentaire": "14. Architecture 3-tiers",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086927,
@@ -27251,7 +27251,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086927",
     "Commentaire": "Le but du 3-Tiers est de séparer les 3 \"couches\" habituelles d'une application...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1000024270,
@@ -27265,7 +27265,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000024270",
     "Commentaire": "Provoque le défilement du champ Traitement de texte afin que le texte voulu apparaisse entièrement.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1000022743,
@@ -27279,7 +27279,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000022743",
     "Commentaire": "Provoque le défilement du champ Traitement de texte afin que le texte voulu apparaisse entièrement.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086940,
@@ -27292,7 +27292,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086940",
     "Commentaire": "Grâce aux fonctions WLangage, WINDEV Mobile permet de...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086938,
@@ -27306,7 +27306,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086938",
     "Commentaire": "Les protocoles POP3/IMAP et SMTP sont des protocoles de gestion des emails reconnus par tous les fournisseurs de services",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086936,
@@ -27319,7 +27319,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086936",
     "Commentaire": "Détail des différents types d'installations",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086935,
@@ -27332,7 +27332,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086935",
     "Commentaire": "Plusieurs méthodes sont proposées pour installer une application WINDEV Mobile",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086932,
@@ -27345,7 +27345,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086932",
     "Commentaire": "Les tests unitaires (appelés également tests automatiques) permettent de tester les fenêtres, les procédures et les classes d'une application ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086931,
@@ -27358,7 +27358,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086931",
     "Commentaire": "Deux modes différents sont disponibles pour déboguer une application WINDEV Mobile",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086930,
@@ -27371,7 +27371,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086930",
     "Commentaire": "Le test de l'ensemble du projet permet de simuler le lancement de l'application.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086928,
@@ -27384,7 +27384,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086928",
     "Commentaire": "Le RAD (Rapid Application Development) permet de créer des fenêtres à partir ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086926,
@@ -27397,7 +27397,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086926",
     "Commentaire": "12. Synchronisation des données",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086925,
@@ -27410,7 +27410,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086925",
     "Commentaire": "Les champs Table/Zone répétée peuvent être utilisés pour afficher un ensemble d'informations...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086924,
@@ -27423,7 +27423,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086924",
     "Commentaire": "Les champs d'une fenêtre peuvent être liés à un fichier de données ou à une requête existante, ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086923,
@@ -27436,7 +27436,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086923",
     "Commentaire": "Une requête sert à interroger une base de données pour visualiser, insérer, modifier ou supprimer des données.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086922,
@@ -27449,7 +27449,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086922",
     "Commentaire": "Une fenêtre peut afficher des informations provenant ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086920,
@@ -27462,7 +27462,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086920",
     "Commentaire": "HFSQL Cluster est une extension du modèle de bases de données de HFSQL Client/Serveur.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086919,
@@ -27475,7 +27475,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086919",
     "Commentaire": "Une application WINDEV Mobile HFSQL peut également fonctionner en mode Client/Serveur.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086918,
@@ -27488,7 +27488,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086918",
     "Commentaire": "Le format HFSQL Classic est le format de base de données ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086917,
@@ -27501,7 +27501,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086917",
     "Commentaire": "Les données manipulées dans une application WINDEV Mobile peuvent provenir",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086915,
@@ -27514,7 +27514,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086915",
     "Commentaire": "Lorsqu'un projet WINDEV, WEBDEV ou WINDEV Mobile utilise des fichiers de données, ce projet doit être associé à une analyse.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086914,
@@ -27527,7 +27527,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086914",
     "Commentaire": "WINDEV Mobile permet de gérer des règles métier.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086913,
@@ -27540,7 +27540,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086913",
     "Commentaire": "Le Centre de Gestion de Projets permet aux différents intervenants d'un projet de gérer leur planning des tâches.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086912,
@@ -27553,7 +27553,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086912",
     "Commentaire": "Le Centre de Gestion de Projets permet à un chef de projet de gérer un projet de développement.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086911,
@@ -27566,7 +27566,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086911",
     "Commentaire": "Pour optimiser la gestion de vos projets de développement, WINDEV Mobile vous propose d'utiliser le Centre de Gestion de Projets.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086908,
@@ -27579,7 +27579,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086908",
     "Commentaire": "Un composant externe est un ensemble d'éléments WINDEV Mobile : fenêtres, états, analyse, etc.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086909,
@@ -27592,7 +27592,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086909",
     "Commentaire": "Un composant interne est un regroupement d'éléments d'un projet.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086906,
@@ -27605,7 +27605,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086906",
     "Commentaire": "Les configurations de projet permettent de définir simplement les différentes \"Cibles\" de votre projet.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086905,
@@ -27618,7 +27618,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086905",
     "Commentaire": "Les configurations de projet permettent de définir simplement les différentes \"Cibles\" de votre projet.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086904,
@@ -27631,7 +27631,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086904",
     "Commentaire": "Les configurations de projet permettent de créer à partir d'un même projet plusieurs \"cibles\" différentes.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086903,
@@ -27644,7 +27644,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086903",
     "Commentaire": "Les projets créés actuellement sont souvent multi-cibles.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086902,
@@ -27657,7 +27657,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086902",
     "Commentaire": "Le tableau de bord du projet est un élément indispensable à la gestion de projets WINDEV Mobile.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086901,
@@ -27670,7 +27670,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086901",
     "Commentaire": "Les modèles d'états permettent d'uniformiser simplement la mise en page de vos états.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086900,
@@ -27683,7 +27683,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086900",
     "Commentaire": "WINDEV Mobile permet de créer et d'imprimer simplement des états, des plus simples aux plus complexes, grâce à l'éditeur d'états.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086899,
@@ -27696,7 +27696,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086899",
     "Commentaire": "WINDEV Mobile permet de créer des modèles de champs.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086898,
@@ -27709,7 +27709,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086898",
     "Commentaire": "WINDEV Mobile permet de créer des modèles de fenêtres.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086897,
@@ -27722,7 +27722,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086897",
     "Commentaire": "Le champ Fenêtre interne permet d'inclure une fenêtre (et son code) dans une autre fenêtre. A l'exécution, la fenêtre à fusionner sera dynamiquement fusionnée à la fenêtre de réception.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086896,
@@ -27735,7 +27735,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086896",
     "Commentaire": "Les menus sont affichés de différentes façons ...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086895,
@@ -27748,7 +27748,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086895",
     "Commentaire": "WINDEV Mobile met à votre disposition de nombreux champs",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086894,
@@ -27761,7 +27761,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086894",
     "Commentaire": "L'agencement permet de définir plusieurs vues d'une fenêtre dans un même projet sans dupliquer cette fenêtre.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086893,
@@ -27774,7 +27774,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086893",
     "Commentaire": "WINDEV Mobile offre la possibilité de configurer de nombreuses caractéristiques des fenêtres.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086892,
@@ -27787,7 +27787,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086892",
     "Commentaire": "Les fenêtres constituent la base de l'UI (Interface Utilisateur) d'une application.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086891,
@@ -27800,7 +27800,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086891",
     "Commentaire": "Les applications créées avec WINDEV Mobile peuvent fonctionner sur les plateformes suivantes",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086890,
@@ -27813,7 +27813,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086890",
     "Commentaire": "WINDEV Mobile couvre la totalité du cycle de développement d'une application",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086939,
@@ -27826,7 +27826,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086939",
     "Commentaire": "Le FTP (File Transfer Protocol) est un protocole de transfert de fichiers d'un site vers un autre site distant.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086910,
@@ -27839,7 +27839,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086910",
     "Commentaire": "WINDEV Mobile propose plusieurs types de génération...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410087480,
@@ -27852,7 +27852,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087480",
     "Commentaire": "3. Le débogueur",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086987,
@@ -27865,7 +27865,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086987",
     "Commentaire": "Gestionnaire de sources (GDS)",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410087446,
@@ -27878,7 +27878,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087446",
     "Commentaire": "7. Gestionnaire de sources (GDS)",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 1410086907,
@@ -27891,7 +27891,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086907",
     "Commentaire": "Pour simplifier vos développements en équipe, WINDEV Mobile propose un gestionnaire de sources.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-07"
   },
   {
     "ID": 3013072,
@@ -27907,7 +27907,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3013072",
     "Commentaire": "Le développement en architecture \"3-tiers\" est maintenant simplifié...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-05"
   },
   {
     "ID": 1410086921,
@@ -27920,7 +27920,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086921",
     "Commentaire": "L'éditeur d'analyses permet de décrire la structure des fichiers de données.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-05"
   },
   {
     "ID": 1410087430,
@@ -27933,7 +27933,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087430",
     "Commentaire": "7. HFSQL : les fichiers créés physiquement",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-05"
   },
   {
     "ID": 1000022165,
@@ -27948,7 +27948,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000022165",
     "Commentaire": "La norme Bluetooth LE (pour Low Energy) permet de gérer des périphériques à basse consommation d'énergie...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-05"
   },
   {
     "ID": 1410091568,
@@ -27964,7 +27964,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091568",
     "Commentaire": "Le type iaModèleTranscriptionAudio permet de définir la configuration du modèle de reconnaissance vocale.Attention : Ce type de variable est disponible pour WINDEV et WEBDEV uniquement à partir de la version \"avril 2026\".Ce type de variable est disponible en Android uniquement à partir de la version \"juin 2026\".Ce type de variable est disponible en iOS uniquement à partir de la version \"juin 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 3044230,
@@ -27980,7 +27980,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3044230",
     "Commentaire": "Renvoie la liste des rubriques :présentes dans un fichier de données (d'une requête ou d'une vue) reconnu par le moteur HFSQL. Les fichiers de données définis par les fonctions HDéclare, HDéclareExterne et HDécritFichier sont pris en compte.présentes dans une variable de type Enregistrement.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-06"
   },
   {
     "ID": 3012003,
@@ -28715,7 +28715,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3013015",
     "Commentaire": "Compile dynamiquement une procédure dont le code source est fourni (compilation dynamique).",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 3013025,
@@ -49683,9 +49683,9 @@
     "Titre": "dPixelCouleur (Fonction)",
     "Anglais": "dPixelColor",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3029014",
-    "Commentaire": "Identifie la couleur d'un pixel contenu : - dans un champ Image. - dans une variable de type Image. - dans une variable de type picCalque. - dans une variable de type WDPic.",
+    "Commentaire": "Identifie la couleur d'un pixel contenu : dans un champ Image.dans une variable de type Image.dans une variable de type picCalque.dans une variable de type WDPic.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-26"
   },
   {
     "ID": 1000017029,
@@ -51590,7 +51590,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090372",
     "Commentaire": "Charge un fichier de code WLangage dans un champ Editeur de code.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090247,
@@ -51605,7 +51605,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090247",
     "Commentaire": "Commente la sélection en cours dans le champ Editeur de code. Les caractères \"//\" sont ajoutés devant la ligne en cours.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090249,
@@ -51620,7 +51620,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090249",
     "Commentaire": "Compile le code WLangage affiché dans le champ Editeur de code et affiche les potentielles erreurs.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090252,
@@ -51635,7 +51635,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090252",
     "Commentaire": "Duplique la ligne courante dans le champ Editeur de code.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090248,
@@ -51650,7 +51650,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090248",
     "Commentaire": "Décommente la sélection en cours dans le champ Editeur de code. Les caractères \"//\" présents devant la ligne en cours sont supprimés.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090253,
@@ -51665,7 +51665,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090253",
     "Commentaire": "Exécute le code WLangage affiché dans le champ Editeur de code.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090254,
@@ -51680,7 +51680,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090254",
     "Commentaire": "Insère une chaîne de caractères dans le champ Editeur de code.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090250,
@@ -51695,7 +51695,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090250",
     "Commentaire": "Recherche une chaîne de caractères ou une expression régulière dans le champ Editeur de code.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090257,
@@ -51710,7 +51710,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090257",
     "Commentaire": "Permet de récupérer l'erreur de compilation du code présent dans le champ Editeur de code.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090245,
@@ -51725,7 +51725,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090245",
     "Commentaire": "Sauve le contenu d'un champ Editeur de code dans un fichier.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410090256,
@@ -51740,7 +51740,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410090256",
     "Commentaire": "Supprime le contenu du champ Editeur de code.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-29"
   },
   {
     "ID": 1410088685,
@@ -72065,7 +72065,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3044044",
     "Commentaire": "Vérifie que les données contenues dans le fichier d'index (fichier .NDX) référencent correctement les données contenues dans le fichier de données (fichier .FIC).",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 1000023126,
@@ -109458,7 +109458,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086916",
     "Commentaire": "Les différents types de fichiers accessibles",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-30"
   },
   {
     "ID": 1410086937,
@@ -109471,7 +109471,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086937",
     "Commentaire": "WINDEV Mobile propose de nombreuses fonctions de communication dans un grand nombre de domaines.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-29"
   },
   {
     "ID": 1410086933,
@@ -109546,7 +109546,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?3070017",
     "Commentaire": "Une application cliente d'un serveur de sockets se connecte à un serveur quelconque pour échanger des informations par l'intermédiaire d'une socket...",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-10-07"
   },
   {
     "ID": 1410086929,
@@ -109559,7 +109559,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410086929",
     "Commentaire": "Une application multilingue est une application qui pourra être diffusée dans plusieurs langues.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-09-30"
   },
   {
     "ID": 1410088396,
@@ -109574,7 +109574,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410088396",
     "Commentaire": "Article LSTLe code WLangage, réutilisable, d'accès et de manipulations des éléments stockés dans Nextcloud.Un exemple support.",
     "EstLST": true,
-    "Date": "2026-01-01"
+    "Date": "2026-10-08"
   },
   {
     "ID": 1410087293,
@@ -146249,9 +146249,9 @@
     "Titre": "FormatImage (Propriété)",
     "Anglais": "ImageFormat",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087663",
-    "Commentaire": "La propriété FormatImage permet de définir ou de connaître le format d'image proposé par défaut lors de l'enregistrement de l'image dans le champ Éditeur d'images (\"Enregistrer sous\"). Attention : Cette propriété est disponible uniquement à partir de la version \"septembre 2026\".",
+    "Commentaire": "La propriété FormatImage permet de définir ou de connaître le format d'image proposé par défaut lors de l'enregistrement de l'image dans le champ Éditeur d'images (\"Enregistrer sous\").Attention : Cette propriété est disponible uniquement à partir de la version \"septembre 2026\".",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 1410088607,
@@ -158311,7 +158311,7 @@
     "ID": 1410087236,
     "Theme": "partie_13",
     "Plateformes": [],
-    "Titre": "Leçon 6 - Les procédures",
+    "Titre": "Leçon 6 - Les procédures (WEBDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087236",
     "Commentaire": "6. Procédures - Tuto WEBDEV - Les bases du WLangage Leçon 6 - Procédures - 20 mn",
@@ -158322,7 +158322,7 @@
     "ID": 1410087237,
     "Theme": "partie_13",
     "Plateformes": [],
-    "Titre": "Leçon 7 - Le débogueur",
+    "Titre": "Leçon 7 - Le débogueur (WEBDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087237",
     "Commentaire": "7. Débogueur - Tuto WEBDEV - Les bases du WLangage Leçon 7 - Débogueur - 30 mn",
@@ -158333,7 +158333,7 @@
     "ID": 1410087238,
     "Theme": "partie_13",
     "Plateformes": [],
-    "Titre": "Leçon 8 - La POO",
+    "Titre": "Leçon 8 - La POO (WEBDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087238",
     "Commentaire": "8. POO - Tuto WEBDEV - Les bases du WLangage Leçon 8 - POO - 30 mn",
@@ -158344,7 +158344,7 @@
     "ID": 1410087231,
     "Theme": "partie_13",
     "Plateformes": [],
-    "Titre": "Leçon 4 - Les instructions conditionnelles",
+    "Titre": "Leçon 4 - Les instructions conditionnelles (WEBDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087231",
     "Commentaire": "4. Instructions conditionnelles - Tuto WEBDEV - Les bases du WLangage Leçon 4 - Instructions conditionnelles - 20 mn",
@@ -158355,7 +158355,7 @@
     "ID": 1410087233,
     "Theme": "partie_13",
     "Plateformes": [],
-    "Titre": "Leçon 5 - Les boucles",
+    "Titre": "Leçon 5 - Les boucles (WEBDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087233",
     "Commentaire": "5. Boucles - Tuto WEBDEV - Les bases du WLangage Leçon 5 - Boucles - 15 mn",
@@ -158395,7 +158395,7 @@
     "ID": 1410087587,
     "Theme": "partie_2",
     "Plateformes": [],
-    "Titre": "Leçon 3 - Dates, tableaux et structures",
+    "Titre": "Leçon 3 - Dates, tableaux et structures (WINDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087587",
     "Commentaire": "3. Dates, tableaux et structures - Tuto WINDEV : Les bases du WLangage Leçon 3 - Dates, tableaux et structures - 20 mn",
@@ -158448,7 +158448,7 @@
     "ID": 1410087579,
     "Theme": "partie_2",
     "Plateformes": [],
-    "Titre": "Leçon 8 - La POO",
+    "Titre": "Leçon 8 - La POO (WINDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087579",
     "Commentaire": "8. POO - Tuto WINDEV - Les bases du WLangage Leçon 8 - POO - 30 mn",
@@ -158459,7 +158459,7 @@
     "ID": 1410087580,
     "Theme": "partie_2",
     "Plateformes": [],
-    "Titre": "Leçon 7 - Le débogueur",
+    "Titre": "Leçon 7 - Le débogueur (WINDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087580",
     "Commentaire": "7. Débogueur - Tuto WINDEV - Les bases du WLangage Leçon 7 - Débogueur - 30 mn",
@@ -158470,7 +158470,7 @@
     "ID": 1410087514,
     "Theme": "partie_2",
     "Plateformes": [],
-    "Titre": "Leçon 2 - Les variables",
+    "Titre": "Leçon 2 - Les variables (WINDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087514",
     "Commentaire": "2. Les variables - Tuto WINDEV : Les bases du WLangage Leçon 2 - Les variables - 20 mn",
@@ -158481,7 +158481,7 @@
     "ID": 1410087516,
     "Theme": "partie_2",
     "Plateformes": [],
-    "Titre": "Leçon 5 - Les boucles",
+    "Titre": "Leçon 5 - Les boucles (WINDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087516",
     "Commentaire": "5. Boucles - Tuto WINDEV - Les bases du WLangage Leçon 5 - Boucles - 15 mn",
@@ -158492,7 +158492,7 @@
     "ID": 1410087515,
     "Theme": "partie_2",
     "Plateformes": [],
-    "Titre": "Leçon 4 - Les instructions conditionnelles",
+    "Titre": "Leçon 4 - Les instructions conditionnelles (WINDEV)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087515",
     "Commentaire": "4. Instructions conditionnelles - Tuto WINDEV - Les bases du WLangage Leçon 4 - Instructions conditionnelles - 20 mn",
@@ -158547,7 +158547,7 @@
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000024448",
     "Commentaire": "Le type ChaîneSecrète permet de manipuler des chaînes de caractères contenues dans le coffre-fort à mots de passe.",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 1410087147,
@@ -158569,9 +158569,9 @@
     "Titre": "Concepts WEBDEV",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087102",
-    "Commentaire": "",
+    "Commentaire": "Concepts WEBDEV",
     "EstLST": false,
-    "Date": "2026-01-01"
+    "Date": "2026-11-02"
   },
   {
     "ID": 1410087387,
@@ -160069,7 +160069,7 @@
     "ID": 1410087589,
     "Theme": "partie3",
     "Plateformes": [],
-    "Titre": "Leçon 3 - Dates, tableaux et structures",
+    "Titre": "Leçon 3 - Dates, tableaux et structures (WINDEV Mobile)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087589",
     "Commentaire": "3. Dates, tableaux et structures - Tuto WINDEV Mobile - Les bases du WLangage Leçon 3 - Dates, tableaux et structures - 20 mn",
@@ -160080,7 +160080,7 @@
     "ID": 1410087588,
     "Theme": "partie3",
     "Plateformes": [],
-    "Titre": "Leçon 2 - Les variables",
+    "Titre": "Leçon 2 - Les variables (WINDEV Mobile)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087588",
     "Commentaire": "2. Les variables - Tuto WINDEV Mobile - Les bases du WLangage Leçon 2 - Les variables - 20 mn",
@@ -160091,7 +160091,7 @@
     "ID": 1410087592,
     "Theme": "partie3",
     "Plateformes": [],
-    "Titre": "Leçon 6 - Les procédures",
+    "Titre": "Leçon 6 - Les procédures (WINDEV Mobile)",
     "Anglais": "",
     "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087592",
     "Commentaire": "6. Procédures - Tuto WINDEV Mobile - Les bases du WLangage Leçon 6 - Procédures - 20 mn",
@@ -168347,5 +168347,188 @@
     "Commentaire": "Liste des constantes utilisées par la fonction ExécuteActionPrédéfinie.",
     "EstLST": false,
     "Date": "2026-01-01"
+  },
+  {
+    "ID": 1410088402,
+    "Theme": "outils",
+    "Plateformes": [
+      "WINDEV",
+      "WEBDEV",
+      "WINDEV MOBILE"
+    ],
+    "Titre": "Partager des éléments entre plusieurs bases de sources GDS",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410088402",
+    "Commentaire": "Article LST Comment partager des éléments (classes, collections de procédures, fenêtres...) entre des projets référencés dans des bases GDS différentes.",
+    "EstLST": true,
+    "Date": "2026-10-29"
+  },
+  {
+    "ID": 1410088247,
+    "Theme": "deploiement",
+    "Plateformes": [
+      "WINDEV"
+    ],
+    "Titre": "Pas à pas : passer une appli du mode \"live Update\" au mode \"store privé\" sans réinstallation",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410088247",
+    "Commentaire": "Article LSTLes étapes pour passer une application WINDEV existante vers le Store Privé, sans réinstallation côté utilisateur.La configuration du Groupware Utilisateur avec Serveur d’authentification.Les deux options d’hébergement disponibles : plateforme PCSCloud ou serveur de votre réseau.",
+    "EstLST": true,
+    "Date": "2026-10-19"
+  },
+  {
+    "ID": 9500020,
+    "Theme": "nouveautes",
+    "Plateformes": [],
+    "Titre": "Nouveautés de la version 2026",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?9500020",
+    "Commentaire": "Nouveautés de la version 2026",
+    "EstLST": false,
+    "Date": "2026-10-26"
+  },
+  {
+    "ID": 1410091726,
+    "Theme": "divers",
+    "Plateformes": [
+      "WINDEV",
+      "WINDEV MOBILE"
+    ],
+    "Titre": "PressePapierÉlément (Type de variable)",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091726",
+    "Commentaire": "Le type PressePapierÉlément permet de connaître les caractéristiques d'un élément présent dans le presse-papiers.Attention : Ce type de variable est disponible uniquement à partir de la version \"octobre 2026\".",
+    "EstLST": false,
+    "Date": "2026-10-28"
+  },
+  {
+    "ID": 1410091733,
+    "Theme": "divers",
+    "Plateformes": [
+      "WINDEV",
+      "WINDEV MOBILE",
+      "ÉTATS ET REQUÊTES"
+    ],
+    "Titre": "PressePapierRécupère (Fonction)",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091733",
+    "Commentaire": "Renvoie le contenu d'un élément du presse-papiers dans un format donné.Attention : Cette fonction est disponible uniquement à partir de la version \"octobre 2026\".",
+    "EstLST": false,
+    "Date": "2026-10-28"
+  },
+  {
+    "ID": 1410091773,
+    "Theme": "divers",
+    "Plateformes": [
+      "WINDEV",
+      "WINDEV MOBILE",
+      "ÉTATS ET REQUÊTES"
+    ],
+    "Titre": "<Variable PressePapierÉlément>.Récupère (Fonction)",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091773",
+    "Commentaire": "Renvoie le contenu d'un élément du presse-papiers dans un format donné.Attention : Cette fonction est disponible uniquement à partir de la version \"octobre 2026\".",
+    "EstLST": false,
+    "Date": "2026-10-28"
+  },
+  {
+    "ID": 1410091730,
+    "Theme": "table",
+    "Plateformes": [
+      "WINDEV",
+      "WINDEV MOBILE",
+      "ÉTATS ET REQUÊTES"
+    ],
+    "Titre": "PressePapierListe (Fonction)",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091730",
+    "Commentaire": "Renvoie la liste des éléments présents dans le presse-papiers, avec pour chacun des éléments, les différents formats disponibles.Attention : Cette fonction est disponible uniquement à partir de la version \"octobre 2026\".",
+    "EstLST": false,
+    "Date": "2026-10-28"
+  },
+  {
+    "ID": 1410091731,
+    "Theme": "divers",
+    "Plateformes": [
+      "WINDEV",
+      "WINDEV MOBILE",
+      "ÉTATS ET REQUÊTES"
+    ],
+    "Titre": "PressePapierFormatDisponible (Fonction)",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410091731",
+    "Commentaire": "Indique si le presse-papiers propose le format spécifié.Attention : Cette fonction est disponible uniquement à partir de la version \"octobre 2026\".",
+    "EstLST": false,
+    "Date": "2026-10-28"
+  },
+  {
+    "ID": 1410087674,
+    "Theme": "divers",
+    "Plateformes": [
+      "WINDEV",
+      "WINDEV MOBILE"
+    ],
+    "Titre": "Gestion du presse-papiers",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410087674",
+    "Commentaire": "Gestion du presse-papiers",
+    "EstLST": false,
+    "Date": "2026-10-28"
+  },
+  {
+    "ID": 1410088400,
+    "Theme": "divers",
+    "Plateformes": [
+      "WINDEV",
+      "WEBDEV"
+    ],
+    "Titre": "SSO WEBDEV : utilisation avancée par programmation",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410088400",
+    "Commentaire": "Comment gérer les comptes utilisateurs du SSO WEBDEV par programmation (création de compte, modification du mot de passe à la première connexion, suppression de compte, ...).Un exemple support avec un composant interne réutilisable.",
+    "EstLST": false,
+    "Date": "2026-10-30"
+  },
+  {
+    "ID": 1000017972,
+    "Theme": "proprietes",
+    "Plateformes": [
+      "WINDEV",
+      "WEBDEV",
+      "WINDEV MOBILE",
+      "ÉTATS ET REQUÊTES"
+    ],
+    "Titre": "URL (Propriété)",
+    "Anglais": "URL",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1000017972",
+    "Commentaire": "La propriété URL permet de connaître et de modifier une URL.",
+    "EstLST": false,
+    "Date": "2026-10-30"
+  },
+  {
+    "ID": 1410088403,
+    "Theme": "outils",
+    "Plateformes": [
+      "WINDEV"
+    ],
+    "Titre": "EXE et DLL : avant de livrer, contrôlez que tous vos binaires sont signés",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410088403",
+    "Commentaire": "Article LSTVérifier la signature des EXE et DLL d'un répertoire.Bloquer automatiquement une install non conforme en termes de sécurité.",
+    "EstLST": true,
+    "Date": "2026-10-30"
+  },
+  {
+    "ID": 1410088401,
+    "Theme": "divers",
+    "Plateformes": [
+      "WINDEV"
+    ],
+    "Titre": "Fini les \"Ã©\" : détectez l'encodage des fichiers automatiquement",
+    "Anglais": "",
+    "Adresse": "https://doc.pcsoft.fr/fr-FR/?1410088401",
+    "Commentaire": "Article LSTSur quoi s'appuyer pour détecter l'encodage d'un fichier texte.Un exemple support.Une collection de procédures prête à l’emploi qui identifie l’encodage de vos fichiers TXT, CSV, XML et HTML.",
+    "EstLST": true,
+    "Date": "2026-10-29"
   }
 ]
